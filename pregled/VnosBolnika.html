@@ -43,7 +43,12 @@ fieldset  {
   width:500px; 
 
   background-color: lightblue;
-{
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
 
 </style>
 <body onload="danesFunction()"> 
@@ -63,10 +68,10 @@ fieldset  {
 	<label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO" >	
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
-    <input id="datPregleda" type = "text" name = "datPregleda" readonly  ><br>
+    <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  ><br>
 	<br><br><br> 
 
-   <p> <input type="submit" name="Submit" value="potrdi">	
+   <p> <button type="submit">Submit</button>
     <input type="reset" name="reset" value="počisti">		
 	</p>	
  </fieldset>	
@@ -79,8 +84,7 @@ fieldset  {
     //document.forms["frm1"].elements["datPregleda"].value = danes; 
 	document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
 	
-window.alert (d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate());
-	document.getElementById("datPregleda").value = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
+	document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
 }
 
 </script>
