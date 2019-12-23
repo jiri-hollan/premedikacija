@@ -1,0 +1,313 @@
+<!DOCTYPE html lang=sl>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Novi bolnik</title>
+</head>
+<style>
+h1 {
+  text-align: center;
+}
+
+
+p {
+  text-align: center; 
+}
+form {
+  padding: 0px 20px;
+  max-width:1000px; 
+  background-color: lightblue;  
+}
+
+fieldset {
+  padding: 20px 2px;
+  width:99%; 
+}
+
+fieldset.zacetek  {
+  padding: 20px 2px;
+  
+    
+}
+
+fieldset.zacetek  label  {
+  width:auto;
+  display: inline-block;
+  text-align: right;
+}
+
+
+fieldset.diagnoze {
+  padding: 1px 2px;    
+}
+fieldset.diagnoze  label  {
+  width:150px;
+  display: inline-block;
+  text-align: right;
+}
+fieldset.diagnoze  input  {
+  width:80%;
+
+}
+fieldset.meritve {
+  padding: 20px 2px;   
+}
+fieldset.meritve  label  {
+  width:auto;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 0px 1px 20px;
+}
+fieldset.meritve  input  {
+  width:50px; 
+}
+
+fieldset.lab {
+  padding: 20px 2px;    
+}
+fieldset.lab  label  {
+  width:100px;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 1px 1px 20px;
+}
+fieldset.lab  input  {
+  width:80px; 
+}
+
+fieldset.ekg {
+  padding: 1px 2px;    
+}
+fieldset.ekg  label  {
+  width:50px;
+  display: inline-block;
+  text-align: right;
+}
+fieldset.ekg  input  {
+  width:90%;  
+}
+
+fieldset.alergija  {
+ padding: 20px 2px;  
+}
+  
+ 
+fieldset.alergija label {
+  width:auto;
+  display: inline-block;
+  text-align: left;    
+  /*padding: 1px 1px 1px 10px;*/
+ }
+ 
+fieldset.alergija #alergija {
+  width:700px;
+  display: inline-box;
+  text-align: left;   
+  /*padding: 1px 1px 1px 20px;*/
+ }
+ fieldset.zaklucek  {
+  padding: 20px 2px;
+  
+   
+}
+ textarea.mala {
+  width: 100%;
+  height: 50px;
+
+    padding: 4px 2px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+textarea.mikro {
+  width: 20%;
+  height: 50x;
+  rows: 3;
+  padding: 4px 20px;
+
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+
+textarea.velka {
+  width: 100%;
+  height: 200px;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+
+</style>
+<body>
+
+<!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
+<form method="post" action="polnjenjeVrstice.php"> 
+
+  <!--  <label for="imeBo">Ime:</label>  
+    <input type="text" name="imeBo" required><br>    
+    <label for="priimekBo">Priimek:</label>
+    <input type="text" name="priimekBo"​ required><br>     
+    <label for="datumRoj">Datum rojstva:</label>
+    <input type="date" name="datumRoj" required><br> 
+    <label for="maticna">Matična številka:</label>
+    <input type="maticna" name="maticna" required><br><br><br> -->
+	
+ <fieldset class="zacetek">
+    <legend></legend>	
+	<label>datum pregleda:<input type="text" name="datPregleda" required></label>      
+	<label>Za oddelek:<input type="text" name="oddelek" ></label>  
+    <br> 
+ </fieldset>
+
+
+ <fieldset class="diagnoze">
+    <legend></legend>
+	<label for="dgOperativna" >Operativna diagnoza:</label>
+	<input id="dgOperativna" type="text" name="dgOperativna" >
+    <br>  
+	<label for="opNacrtovana">Načrtovana operacija:</label>  
+    <input id="opNacrtovana"  type="text" name="opNacrtovana" >
+ </fieldset>
+
+ 
+<!-- <fieldset class="meritve">
+    <legend></legend>
+    <label>Starost:<input type="text" name="starost" size="1" required></label>      
+    <label>Teža:<input type="text" name="teza" size="1" required> kg</label>        	
+    <label>Višina:<input type="text" name="visina" size="1" required> m </label>      
+    <label >BMI:<input type="text" name="bmi" size="1" required></label>       
+    <label>Krvni Tlak:<input type="text" name="krvniTlak" size="1" required></label>      
+    <label>Pulz:<input type="text" name="pulz" size="1" required></label>  
+    <br> 
+ </fieldset>-->
+  <fieldset class="meritve">
+    <legend></legend>	
+    <label for="starost">Starost:<input type="text" name="starost" size="1" readonly></label>      
+    <label for = "teza">Teža:<input id = "teza" type = "text" name = "teza" onkeyup="bmiFunction()" required>kg</label>
+    <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina" size="1" onkeyup="bmiFunction()" required>m</label> 
+    <label for = "bmi"><input type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly></label>  
+    <label for = "krvniTlak">Krvni Tlak:<input type="text" name="krvniTlak" size="1" ></label>    
+    <label for = "pulz">Pulz:<input type="text" name="pulz" size="1" ></label>  
+    <br> 
+ </fieldset>
+ 
+ <fieldset class="lab">
+    <legend></legend>
+    <label for="hb">Hb:</label>  
+    <input id="hb" type="text" name="hb" size="1" ><br>
+    <label for="ks">KS:</label>  
+    <input id="ks"type="text" name="ks" size="1" > <br>
+    <label for="inr">INR:</label>  
+    <input id="inr" type="text" name="inr" size="1" ><br> 
+    <label for="aptc">APTČ:</label>  
+    <input id="aptc" type="text" name="aptc" size="1" ><br>
+    <label for="trombociti">Trombociti:</label>  
+    <input id="trombociti" type="text" name="trombociti" size="1" ><br>
+    <label for="kreatinin">Kreatinin:</label>  
+    <input id="kreatinin" type="text" name="kreatinin" size="1" ><br> 
+    <label for="drugiIzvidi">Drugi izvidi:</label>  
+    <input id="drugiIzvidi" type="textarea" name="drugiIzvidi" size="50" ><br> 
+ </fieldset>
+ 
+ <fieldset class="ekg">
+    <legend></legend>
+    <label for="ekg">EKG:</label>  
+    <input id="ekg" type="text" name="ekg" ><br> 
+    <label for="rtg">RTG:</label>  
+    <input id="rtg" type="text" name="rtg" ><br> 
+ </fieldset>
+
+    <label for="dgPridruzene">Pridružene bolezni:</label><br>  
+    <textarea class="mala" rows="4" cols="200" name="dgPridruzene"></textarea><br>
+
+    <label for="terPredhodna">Predhodna terapija:</label><br>   
+    <textarea class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
+
+ <fieldset class="alergija">
+    <legend></legend>
+     <label>ASA:<input type="text" name="asa" size="1" maxlength="1" ></label>  
+     <label>Mallampati:<input type="text" name="mallapati" size="1" maxlength="1" ></label>      
+     <label for="alergija">Alergija:<input id="alergija" type="text" name="alergija"  ></label>
+	 
+ </fieldset>
+ 
+
+	<labelfor="izvidiInOpombe">Izvidi in opombe:</label><br>  
+    <textarea class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
+	
+ <fieldset class="zaklucek">
+    <legend>premedikacija</legend>
+	<label for="premedVecer">Zvečer:</label>  
+    <input id="premedVecer" type="textarea" name="premedVecer" >
+	<label for="premedPredOp">Pred operacijo:</label>  
+    <input id="premedPredOp" type="textarea" name="premedPredOp" > 
+	<label for="navodila">Pripomba:</label>  
+    <textarea class="mikro"  name="navodila" rows="3" ></textarea><br> 
+ </fieldset>
+ 
+
+	
+   <p> <input type="submit" name="Submit" value="potrdi">	
+    <input type="reset" name="reset" value="počisti">		
+	</p>	
+ </fieldset>	
+
+</form>
+<script>
+var visina;
+var teza;
+var BMI;
+
+function bmiFunction()
+{
+    teza = document. getElementById('teza').value;
+    visina = document. getElementById('visina').value;
+
+    teza = validacija(teza);
+    visina = validacija(visina);
+
+    document.getElementById('teza').value = teza;
+    document.getElementById('visina').value = visina;
+
+     //window.alert ("1teža" + teza);
+     //window.alert ("1višina" + visina);
+    if (visina!=0 && teza!=0) {
+        //window.alert ("2teža" + teza);
+        //window.alert ("2višina" + visina);
+        BMI = Math.round(teza/(visina*visina));
+        //window.alert ("BMI= " + BMI);
+        document.getElementById('bmi').value=BMI;
+    } else {
+        // window.alert ("BMI2= " + BMI);
+        document.getElementById('bmi').value="";
+    }
+}
+
+function validacija(input) {
+    if (input < 0) {
+        return 0;
+    }
+
+    if (input == "NaN") {
+        return 0;
+    }
+
+    return input.replace(",", ".");
+}
+</script>
+
+
+
+</body>
+</html>
