@@ -154,14 +154,24 @@ textarea.velka {
 <!--<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <!--<form method="post" action="polnjenjeVrstice.php"> -->
 <form method="post" action="polnjenjeVrstice.php">
-  <!--  <label for="imeBo">Ime:</label>  
-    <input type="text" name="imeBo" required><br>    
-    <label for="priimekBo">Priimek:</label>
-    <input type="text" name="priimekBo"​ required><br>     
-    <label for="datumRoj">Datum rojstva:</label>
-    <input type="date" name="datumRoj" required><br> 
-    <label for="maticna">Matična številka:</label>
-    <input type="maticna" name="maticna" required><br><br><br> -->
+<fieldset class="novBolnik">
+    <legend>Nov bolnik</legend>
+    <h2 id="lab6"> </h2>
+    <label for="ime">Ime:</label>  
+    <input id="ime" type="text" name="ime" required>    
+    <label for="priimek">Priimek:</label>
+    <input id="priimek" type="text" name="priimek"​ required>     
+    <label for="datRojstva">Datum rojstva:</label>
+    <input id="datRojstva"type="date" name="datRojstva" required>
+    <label for="stevMaticna">Matična številka:</label>
+    <input id="stevMaticna"type="text" name="stevMaticna" required><br>
+    <label for="EMSO">EMŠO:</label>
+    <input id="EMSO" type="text" name="EMSO" >  
+    <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
+    <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  ><br>
+  <br><br><br>  
+  </p>  
+ </fieldset>  
 	
  <fieldset class="zacetek">
     <legend></legend>	
