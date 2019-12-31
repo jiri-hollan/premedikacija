@@ -9,6 +9,10 @@ h1 {
   text-align: center;
 }
 
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
 
 p {
   text-align: center; 
@@ -162,7 +166,6 @@ textarea.velka {
 <form method="post" action="polnjenjeVrstice.php">
 <fieldset class="novBolnik">
     <legend id="lab6">Nov bolnik</legend>
-   <!-- <h2 id="lab6"> </h2>-->
     <label for="ime">Ime:</label>  
     <input id="ime" type="text" name="ime" required>    
     <label for="priimek">Priimek:</label>
@@ -173,7 +176,6 @@ textarea.velka {
     <input id="stevMaticna"type="text" name="stevMaticna" required>
     <label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO" >  
-  
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  > 
  </fieldset>  
 	
