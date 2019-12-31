@@ -24,7 +24,14 @@ fieldset {
   width:99%; 
 }
 
-fieldset.zacetek  {
+fieldset.novBolnik label  {
+
+  width:auto;
+  display: block;
+  text-align: left;
+}
+
+fieldset.zacetek { 
   padding: 20px 2px;
   
     
@@ -150,13 +157,12 @@ textarea.velka {
 
 </style>
 <body>
+<body onload="danesFunction()"> 
 
-<!--<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-<!--<form method="post" action="polnjenjeVrstice.php"> -->
 <form method="post" action="polnjenjeVrstice.php">
 <fieldset class="novBolnik">
-    <legend>Nov bolnik</legend>
-    <h2 id="lab6"> </h2>
+    <legend id="lab6">Nov bolnik</legend>
+   <!-- <h2 id="lab6"> </h2>-->
     <label for="ime">Ime:</label>  
     <input id="ime" type="text" name="ime" required>    
     <label for="priimek">Priimek:</label>
@@ -164,13 +170,11 @@ textarea.velka {
     <label for="datRojstva">Datum rojstva:</label>
     <input id="datRojstva"type="date" name="datRojstva" required>
     <label for="stevMaticna">Matična številka:</label>
-    <input id="stevMaticna"type="text" name="stevMaticna" required><br>
+    <input id="stevMaticna"type="text" name="stevMaticna" required>
     <label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO" >  
-    <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
-    <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  ><br>
-  <br><br><br>  
-  </p>  
+  
+    <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  > 
  </fieldset>  
 	
  <fieldset class="zacetek">
@@ -264,6 +268,19 @@ textarea.velka {
  </fieldset>	
 
 </form>
+
+<script>
+   var danes;
+  function danesFunction() {
+    var d = new Date();   
+    var danes = d.toLocaleDateString("sl-sl");  
+    //document.forms["frm1"].elements["datPregleda"].value = danes; 
+  document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
+  
+  document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+}
+
+</script>
 <script>
 var visina;
 var teza;
