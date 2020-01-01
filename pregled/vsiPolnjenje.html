@@ -31,7 +31,7 @@ fieldset {
 fieldset.novBolnik label  {
 
   width:auto;
-  display: block;
+  display: inline-block;
   text-align: left;
 }
 
@@ -166,22 +166,22 @@ textarea.velka {
 <form method="post" action="polnjenjeVrstice.php">
 <fieldset class="novBolnik">
     <legend id="lab6">Nov bolnik</legend>
-    <label for="ime">Ime:</label>  
+   <!-- <label for="ime">Ime:</label>  -->
     <input id="ime" type="text" name="ime" required>    
-    <label for="priimek">Priimek:</label>
+    <!-- <label for="priimek">Priimek:</label> -->
     <input id="priimek" type="text" name="priimek"​ required>     
-    <label for="datRojstva">Datum rojstva:</label>
+    <!-- <label for="datRojstva">Datum rojstva:</label> -->
     <input id="datRojstva"type="date" name="datRojstva" required>
-    <label for="stevMaticna">Matična številka:</label>
+    <label for="stevMaticna">Matična številka:</label>     
     <input id="stevMaticna"type="text" name="stevMaticna" required>
-    <label for="EMSO">EMŠO:</label>
-    <input id="EMSO" type="text" name="EMSO" >  
+    <!--  <label for="EMSO">EMŠO:</label>-->
+    <input id="EMSO" type = "hidden" name="EMSO" >  
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  > 
  </fieldset>  
 	
  <fieldset class="zacetek">
     <legend></legend>	
-	<label>datum pregleda:<input type="text" name="datPregleda" required></label>      
+	<!-- <label>datum pregleda:<input type="text" name="datPregleda" required></label>  -->     
 	<label>Za oddelek:<input type="text" name="oddelek" required></label>  
     <br> 
  </fieldset>
