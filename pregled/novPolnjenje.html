@@ -190,7 +190,7 @@ textarea.velka {
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <form method="post" action="polnjenjeVrstice.php"> 
 
-<fieldset class="novBolnik">
+<fieldset class="novBolnik" >
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
     <label for="ime">Ime:</label>  
@@ -212,12 +212,19 @@ textarea.velka {
   <br><br><br> 
 
   
-   <!-- <input type="reset" name="reset" value="počisti">  --> 
+   <p> <button ​ onclick="osebniFunction()">Naprej</button>
+    
+  </p>
  
  </fieldset>  
+<!-- ______________________________________________________________________________________
 
- <div class="glavna">
-	
+...........................Drugi del formularja................................-->
+
+ <div class="glavna" >
+
+	<h3 id="osebni"> osebni</h3>
+
  <fieldset class="zacetek">
     <legend></legend>      
   <label>Za oddelek:<input type="text" name="oddelek" required></label>  
@@ -388,6 +395,17 @@ function validacija(input) {
   var starost = ~~(d3 / n);
  //window.alert (starost);
   document.getElementById("starost").value = starost; 
+}
+
+function osebniFunction()
+ {
+priimek = document.getElementById("priimek").value;
+ime = document.getElementById("ime").value;
+datRojstva = document.getElementById("datRojstva").value ;
+stevMaticna = document.getElementById("stevMaticna").value;
+
+  document.getElementById("osebni").innerHTML = priimek + " " + ime + "  " + "roj: " + datRojstva + "  mat. indeks: " + stevMaticna;
+
 }
 </script>
 
