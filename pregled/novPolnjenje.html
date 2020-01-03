@@ -64,6 +64,7 @@ div.glavna {
   padding: 0px 20px;
   max-width:1000px; 
   background-color: lightblue;  
+  visibility: hidden;
 }
 
 fieldset.zacetek  label  {
@@ -190,7 +191,7 @@ textarea.velka {
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 <form method="post" action="polnjenjeVrstice.php"> 
 
-<fieldset class="novBolnik" >
+<fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
     <label for="ime">Ime:</label>  
@@ -213,6 +214,7 @@ textarea.velka {
 
   
    <p> <button ​ onclick="osebniFunction()">Naprej</button>
+       <button ​ onclick="skriFunction()">Skrij</button>
     
   </p>
  
@@ -221,7 +223,7 @@ textarea.velka {
 
 ...........................Drugi del formularja................................-->
 
- <div class="glavna" >
+ <div class="glavna" id="druga" >
 
 	<h3 id="osebni"> osebni</h3>
 
@@ -399,14 +401,26 @@ function validacija(input) {
 
 function osebniFunction()
  {
+
 priimek = document.getElementById("priimek").value;
 ime = document.getElementById("ime").value;
 datRojstva = document.getElementById("datRojstva").value ;
 stevMaticna = document.getElementById("stevMaticna").value;
 
   document.getElementById("osebni").innerHTML = priimek + " " + ime + "  " + "roj: " + datRojstva + "  mat. indeks: " + stevMaticna;
+     document.getElementById("prva").style.display = "none"; 
+     document.getElementById("druga").style.visibility = "visible";
+   }
 
-}
+function skriFunction()
+ {
+   //document.getElementById("prva").style.visibility = "hidden";
+   document.getElementById("prva").style.display = "none"; 
+
+   document.getElementById("druga").style.visibility = "visible";
+ // document.getElementsByClassName("glavna").style.display = "none"; 
+
+   }   
 </script>
 
 
