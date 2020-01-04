@@ -189,7 +189,8 @@ textarea.velka {
 <body onload="danesFunction()"> 
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-<!--<form method="post" action="polnjenjeVrstice.php">--> 
+
+
 <form method="post" action="vnosVrstice.php"> 
 <fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
@@ -312,7 +313,7 @@ textarea.velka {
  
 
 	
-   <p> <input type="submit" name="Submit" value="potrdi">	
+   <p> <button type="submit">Potrdi</button>
     <input type="reset" name="reset" value="počisti">		
 	</p>	
  </fieldset>	
@@ -410,6 +411,8 @@ stevMaticna = document.getElementById("stevMaticna").value;
   document.getElementById("osebni").innerHTML = priimek + " " + ime + "  " + "roj: " + datRojstva + "  mat. indeks: " + stevMaticna;
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.visibility = "visible";
+ 
+}
    }
 
 function skriFunction()
