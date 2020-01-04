@@ -9,8 +9,8 @@
 <?php
 // define variables and set to empty values
 $ime = $priimek = $datRojstva  = $stevMaticna = $EMSO = "";
-$imeTable = 'novBolnikTab';
-
+//$imeTable = 'novBolnikTab';
+$imeTable = 'podatkiVsi';
 
 $polja = implode(',', array_keys($_POST));
 
