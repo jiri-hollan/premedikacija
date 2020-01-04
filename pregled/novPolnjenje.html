@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Novi bolnik</title>
+<script src="js/bmi.js"></script>
+<script src="js/danes.js"></script>
+<script src="js/starost.js"></script>
 </head>
 <style>
 h1 {
@@ -319,113 +322,6 @@ textarea.velka {
  </fieldset>	
 </div>
 </form>
-
-<script>
-var visina;
-var teza;
-var BMI;
-
-function bmiFunction()
-{
-    teza = document. getElementById('teza').value;
-    visina = document. getElementById('visina').value;
-
-    teza = validacija(teza);
-    visina = validacija(visina);
-
-    document.getElementById('teza').value = teza;
-    document.getElementById('visina').value = visina;
-
-     //window.alert ("1teža" + teza);
-     //window.alert ("1višina" + visina);
-    if (visina!=0 && teza!=0) {
-        //window.alert ("2teža" + teza);
-        //window.alert ("2višina" + visina);
-        BMI = Math.round(teza/(visina*visina));
-        //window.alert ("BMI= " + BMI);
-        document.getElementById('bmi').value=BMI;
-    } else {
-        // window.alert ("BMI2= " + BMI);
-        document.getElementById('bmi').value="";
-    }
-}
-
-function validacija(input) {
-    if (input < 0) {
-        return 0;
-    }
-
-    if (input == "NaN") {
-        return 0;
-    }
-
-    return input.replace(",", ".");
-}
-</script>
-<script>
-  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
-   var danes;
-  function danesFunction() {
-    var d = new Date();   
-    var danes = d.toLocaleDateString("sl-SI");  
-    //document.forms["frm1"].elements["datPregleda"].value = danes; 
-  document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
-  
-  document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
-}
-
-</script>
-<script>
-  //................ Izračun starosti.............
-  
-
-  var dateParts;
-  var starost;
-  var datRojstva;
-
- function starostFunction()
- {
-  datRojstva = document.getElementById("datRojstva").value ;
-  var dateParts = datRojstva.split(".");  
-// month is 0-based, that's why we need dataParts[1] - 1
-  var datRojstva = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);  //datRojstva = dateObject
- //** var datRojstva = new Date(dateObject.toString());
-  var d1 = Date.parse(datRojstva);
-  var d2 = Date.parse(Date());
-  var d3 = d2 - d1;
-  var n = 1000*60*60*24*365.25;
-// window.alert ("n= " + n);
-  var starost = ~~(d3 / n);
- //window.alert (starost);
-  document.getElementById("starost").value = starost; 
-}
-
-function osebniFunction()
- {
-
-priimek = document.getElementById("priimek").value;
-ime = document.getElementById("ime").value;
-datRojstva = document.getElementById("datRojstva").value ;
-stevMaticna = document.getElementById("stevMaticna").value;
-
-  document.getElementById("osebni").innerHTML = priimek + " " + ime + "  " + "roj: " + datRojstva + "  mat. indeks: " + stevMaticna;
-     document.getElementById("prva").style.display = "none"; 
-     document.getElementById("druga").style.visibility = "visible";
- 
-}
-   }
-
-function skriFunction()
- {
-   //document.getElementById("prva").style.visibility = "hidden";
-   document.getElementById("prva").style.display = "none"; 
-
-   document.getElementById("druga").style.visibility = "visible";
- // document.getElementsByClassName("glavna").style.display = "none"; 
-
-   }   
-</script>
-
 
 </body>
 </html>
