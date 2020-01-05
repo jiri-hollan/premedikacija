@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sl-SI">
+<body>
+
+<label for="zdravnik">Zdravnik: </label>
+<input id="zdravnik" type="text" name="zdravnik"  onfocusout="zdravnikFunction()" required ><br> 
+ <p> <button ​ onclick="naprejFunction()">Naprej</button>
+<p id="result"> </p>
+<script>
+ 
+function zdravnikFunction() { 
+ 
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+ imeZdravnika = document.getElementById("zdravnik").value ;
+
+localStorage.setItem("imeZdravnika", imeZdravnika);
+  //localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("imeZdravnika");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+}
+function naprejFunction() { 
+
+                window.open("novPolnjenje.html", "_self"); 
+            
+}
+</script>
+
+</body>
+</html>

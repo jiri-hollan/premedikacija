@@ -7,4 +7,5 @@
   document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
   
   document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+
 }

@@ -12,7 +12,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=premedikacija', 'root', '');
  
 //Our SQL statement, which will select a list of tables from the current MySQL database.
 // $sql = "SELECT * FROM podatkiVsi";
-   $sql = "select column_name from information_schema.columns where table_name = 'novBolnikTab'";
+   $sql = "select column_name from information_schema.columns where table_name = 'bolnikTable'";
  
 //Prepare our SQL statement,
 $statement = $pdo->prepare($sql);
