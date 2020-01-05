@@ -233,7 +233,17 @@ textarea.velka {
 
  <fieldset class="zacetek">
     <legend></legend>      
-  <label>Za oddelek:<input type="text" name="oddelek" required></label>  
+ <!-- <label>Za oddelek:<input type="text" name="oddelek" required></label> --> 
+
+
+  <label>Za oddelek:<input list="oddelek" name="oddelek"></label>  
+  <datalist id="oddelek">
+    <option value="Kirurgija">
+    <option value="gibekologija">
+    <option value="urologija">
+    <option value="ORL">
+    <option value="RTG">
+  </datalist>
   
   <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika"></label>
     <br> 
