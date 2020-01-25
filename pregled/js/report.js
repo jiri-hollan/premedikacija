@@ -1,15 +1,16 @@
 
  function reportFunction()
  {
+ 	 var x;
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.visibility = "visible";
 
 
 nalepka = document.getElementById("priimek").value;
-nalepka = "priimek in ime: " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
-nalepka = nalepka + "dat. rojstva: " +  "<b>" + document.getElementById("datRojstva").value + "</b>" + "<br>" ;
-nalepka = nalepka + "matična št. " +  "<b>" + document.getElementById("stevMaticna").value + "</b>" ;
+nalepka = "priimek in ime:.... " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
+nalepka = nalepka + "datum rojstva:..... " +  "<b>" + document.getElementById("datRojstva").value + "</b>" + "<br>" ;
+nalepka = nalepka + "matična številka:. " +  "<b>" + document.getElementById("stevMaticna").value + "</b>" ;
 //alert(nalepka);
 document.getElementById("nalepkaR").innerHTML=nalepka;
 //---------------------------------------------------------------
@@ -21,15 +22,48 @@ diagnoza =  "Op.diagnoza: " +    "<b>" + document.getElementById("dgOperativna")
 document.getElementById("diagnozaR").innerHTML=diagnoza;
 diagnoza =  "predvidena op.: " +    "<b>" + document.getElementById("opNacrtovana").value + "</b>";
 document.getElementById("operacijaR").innerHTML=diagnoza;
+//..................................če ni vpisana vrednost............................................................................
+function xFunction(x)
+ {
+if((x === undefined || x == null || x.length <= 0))  {
+x = "....";
+//alert(typeof x + x);
+return x;
+     }
+  else {
+  //x = x;
+  return x;
+     }
+  }	
+//................................................................................................................
+ x = document.getElementById("starost").value;
+ x = xFunction(x);
+//alert(typeof x + x);
+meritve =  "starost:" + "&nbsp"  + "<b>" + x + "&nbsp" + "let" + "</b>" + "&nbsp";
+x = document.getElementById("teza").value;
+x = xFunction(x);
+meritve =  meritve +  " " + " teža:" + "&nbsp" + "<b>" + x + "&nbsp" + "kg " + "</b>" + "&nbsp";
 
-meritve =  "starost: " + "<b>" + document.getElementById("starost").value + " let " + "</b>";
-meritve =  meritve + " teža: " + "<b>" + document.getElementById("teza").value + " kg " + "</b>";
-meritve =  meritve + " višina: " + "<b>" + document.getElementById("visina").value + " m " + "</b>";
+x = document.getElementById("visina").value;
+x = xFunction(x);
+meritve =  meritve + " "  + " višina:" + "&nbsp" + "<b>" + x + "&nbsp" +  "m " + "</b>" + "&nbsp";
 
-alert(typeof meritve + meritve);
+x = document.getElementById("bmi").value;
+x = xFunction(x);
+meritve =  meritve +  " " + " BMI:" + "&nbsp" + "<b>" + x +  "</b>" + "&nbsp";
+
+x = document.getElementById("krTlak").value;
+x = xFunction(x);
+meritve =  meritve +  " " + " krvni tlak:" + "&nbsp" + "<b>" + x + "&nbsp" + "mmHg " + "</b>" + "&nbsp";
+
+x = document.getElementById("pulz").value;
+x = xFunction(x);
+meritve =  meritve +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " + "</b>";
+
+//alert(typeof meritve + meritve);
 document.getElementById("meritveR").innerHTML=meritve;
 
-spa=document.getElementById("sp").innerHTML;
+//spa=document.getElementById("sp").innerHTML;
 //alert(typeof spa + spa);
 //document.getElementById("diagnozaR").innerHTML=spa;
 //document.getElementById("nalepkaR").innerHTML=spa;

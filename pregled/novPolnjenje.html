@@ -88,9 +88,9 @@
     <label for="starost">Starost:<input  id="starost" type="text" name="starost" size="1" readonly></label>      
     <label for = "teza">Teža:<input id = "teza" type = "text" name = "teza" onkeyup="bmiFunction()" required>kg</label>
     <label for = "visina">Višina:<input id = "visina" type = "text" name = "visina" size="1" onkeyup="bmiFunction()" required>m</label> 
-    <label for = "bmi">BMI: <input type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly></label>  
-    <label for = "krvniTlak">Krvni Tlak:<input type="text" name="krvniTlak" size="1" ></label>    
-    <label for = "pulz">Pulz:<input type="text" name="pulz" size="1" ></label>  
+    <label for = "bmi">BMI: <input id = "bmi" type = "text" name = "bmi" id = "bmi" onclick = "bmiFunction()" readonly></label>  
+    <label for = "krvniTlak">Krvni Tlak:<input id = "krTlak" type="text" name="krvniTlak" size="1" ></label>    
+    <label for = "pulz">Pulz:<input id = "pulz" type="text" name="pulz" size="1" ></label>  
     <br> 
  </fieldset>
  
@@ -150,10 +150,9 @@
  
 
 	
-  <p> <button type="submit">Potrdi</button>
-    <!--<input type="text" name="reset" value="Tisk" onclick="reportFunction()">	-->
-    <button onclick="reportFunction()">Tisk</button>
- </p>	
+  <p> <button type="submit">Potrdi</button> .................                     
+      <button onclick="reportFunction()">Tisk</button>
+  </p>	
  </fieldset>	
 </div>
 </form>
