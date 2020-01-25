@@ -7,7 +7,7 @@
  <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
 <script>
- 
+   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 function zdravnikFunction() { 
  
 // Check browser support
@@ -16,9 +16,9 @@ if (typeof(Storage) !== "undefined") {
  imeZdravnika = document.getElementById("zdravnik").value ;
 
 localStorage.setItem("imeZdravnika", imeZdravnika);
-  //localStorage.setItem("lastname", "Smith");
+
   // Retrieve
-  document.getElementById("result").innerHTML = localStorage.getItem("imeZdravnika");
+  document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 } else {
   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }

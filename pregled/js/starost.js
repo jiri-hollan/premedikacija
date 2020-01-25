@@ -34,6 +34,6 @@ stevMaticna = document.getElementById("stevMaticna").value;
   
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.visibility = "visible";
- 
+     document.getElementById("tretja").style.visibility = "none";
 }
    

@@ -1,0 +1,183 @@
+/* CSS za novPolnjenje.HTML*/
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center; 
+}
+
+fieldset {
+  padding: 20px 2px;
+  width:99%; 
+}
+
+fieldset.novBolnik  {
+   padding: 20px 20px;
+  width:500px; 
+  background-color: lightblue; 
+
+}
+fieldset.novBolnik legend {
+   background-color: navy;
+   color: yellow; 
+   font-size: 2.0em;
+}    
+
+fieldset.novBolnik label {
+  width:180px;
+  display: inline-block;
+  text-align: right;
+}
+
+fieldset.novBolnik input {
+ <!--width: 50%;-->
+font-size: 20px;
+ padding: 5px 5px;
+ margin: 5px 5px;
+ box-sizing: border-box;
+ border: 3px solid #ccc;
+ webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+fieldset.novBolnik input:focus {
+  border: 3px solid #555;
+}
+
+fieldset.zacetek  {
+  padding: 20px 2px;
+      
+}
+
+div.glavna {
+  padding: 0px 20px;
+  max-width:1000px; 
+  background-color: lightblue;  
+  visibility: hidden;
+}
+
+fieldset.zacetek  label  {
+  width:auto;
+  display: inline-block;
+  text-align: right;
+}
+
+
+fieldset.diagnoze {
+  padding: 1px 2px;    
+}
+
+fieldset.diagnoze  label  {
+  width:150px;
+  display: inline-block;
+  text-align: right;
+}
+
+fieldset.diagnoze  input  {
+  width:80%;
+
+}
+fieldset.meritve {
+  padding: 20px 2px;   
+}
+
+fieldset.meritve  label  {
+  width:auto;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 0px 1px 20px;
+}
+fieldset.meritve  input  {
+  width:50px; 
+}
+
+fieldset.lab {
+  padding: 20px 2px;    
+}
+
+fieldset.lab  label  {
+  width:100px;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 1px 1px 20px;
+}
+
+fieldset.lab  input  {
+  width:80px; 
+}
+
+fieldset.ekg {
+  padding: 1px 2px;    
+}
+fieldset.ekg  label  {
+  width:50px;
+  display: inline-block;
+  text-align: right;
+}
+
+fieldset.ekg  input  {
+  width:90%;  
+}
+
+fieldset.alergija  {
+ padding: 20px 2px;  
+}
+  
+ 
+fieldset.alergija label {
+  width:auto;
+  display: inline-block;
+  text-align: left;    
+  /*padding: 1px 1px 1px 10px;*/
+ }
+ 
+fieldset.alergija #alergija {
+  width:700px;
+  display: inline-box;
+  text-align: left;   
+  /*padding: 1px 1px 1px 20px;*/
+ }
+ 
+fieldset.zaklucek  {
+  padding: 20px 2px;   
+}
+
+textarea.mala {
+  width: 100%;
+  height: 50px;
+
+    padding: 4px 2px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+textarea.mikro {
+  width: 20%;
+  height: 50x;
+  rows: 3;
+  padding: 4px 20px;
+
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+textarea.velka {
+  width: 100%;
+  height: 200px;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
