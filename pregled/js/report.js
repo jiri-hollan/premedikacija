@@ -101,17 +101,29 @@ document.getElementById("mallR").innerHTML= mall;
 var alergija = document.getElementById("alergija").value;
 //alert(alergija);
 document.getElementById("alergijaR").innerHTML= alergija;
-
-
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
 document.getElementById("izvidiR").innerHTML= "Izvidi in opombe: " + izvidi;
+//....................premedikacija..........................................................
+var premedikacija = "";
+var vecer = document.getElementById("premedVecer").value;
+var jutri = document.getElementById("premedPredOp").value;
 
-//preiskava = document.​forms["frm1"].fieldset["lab"]. ​getElementsByTagName("input")[0].name;
-//alert(preiskava);
-//spa=document.getElementById("sp").innerHTML;
-//alert(typeof spa + spa);
-//document.getElementById("diagnozaR").innerHTML=spa;
-//document.getElementById("nalepkaR").innerHTML=spa;
+if (vecer.length > 0) {
+  premedikacija = premedikacija + "<br>" +  "zvečer: " + vecer;
+}
+if (jutri.length > 0) {
+  premedikacija = premedikacija + "<br>" +  "Pred op.: " + jutri;
+}
+
+document.getElementById("premedikacijaR").insertAdjacentHTML("beforeend", premedikacija);
+//....................navodila................................................................
+var navodila = document.getElementById("navodila").value;
+//alert(alergija);
+document.getElementById("navodilaR").innerHTML= navodila;
+//......................zdravnik...............................................................
+  document.getElementById("zdravnikR").innerHTML = localStorage.getItem("imeZdravnika");
+
+
 
 }

@@ -175,7 +175,7 @@ position: relative;
     border-style:solid; 
     margin: 1px;  
 }
-.premedikacijaR {
+#premedikacijaR {
     position: absolute;
     bottom: 1.5cm;
     left: 1px;
@@ -185,7 +185,7 @@ position: relative;
     border-style:solid;
     padding: 12px;
 } 
-.navodilaR {
+#navodilaR {
     position: absolute;
     bottom: 2px;
     right: 2px;

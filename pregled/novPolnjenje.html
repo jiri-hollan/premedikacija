@@ -138,15 +138,15 @@
 	<labelfor="izvidiInOpombe">Izvidi in opombe:</label><br>  
     <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
 	
- <fieldset class="zaklucek">
-    <legend>premedikacija</legend>
-	<label for="premedVecer">Zvečer:</label>  
-    <input id="premedVecer" type="textarea" name="premedVecer" >
-	<label for="premedPredOp">Pred operacijo:</label>  
-    <input id="premedPredOp" type="textarea" name="premedPredOp" > 
-	<label for="navodila">Pripomba:</label>  
-    <textarea class="mikro"  name="navodila" rows="3" ></textarea><br> 
- </fieldset>
+ <fieldset class="zaklucek">premedikacija 
+  <div id="zaklucek">
+	<label for="premedVecer">Zvečer:..<input id="premedVecer" type="textarea" name="premedVecer" ></label>  
+    <br>
+	<label for="premedPredOp">Pred op.:<input id="premedPredOp" type="textarea" name="premedPredOp" ></label> <br> 
+     
+    <textarea id="navodila" class="mikro"  name="navodila" rows="3" >Navodila:</textarea>
+   </div>
+  </fieldset>
  
 
 	
@@ -184,9 +184,9 @@
 
   <textarea class="velka" id="izvidiR">Izvidi in opombe</textarea>
 </div>   
-   <div class="premedikacijaR"></div>
+   <div id="premedikacijaR"><i>premedikacija</i></div>
    <div id="zdravnikR"></div>
-   <div class="navodilaR"></div>
+   <div id="navodilaR"></div>
 
 </div>
 <script>
