@@ -88,9 +88,20 @@ var prid = document.getElementById("dgPridruzene").value;
 document.getElementById("pridBolezniR").innerHTML= "Pridružene bolezni: " + prid;
 //................................... predhodna terapija.........................................
 var pred = document.getElementById("terPredhodna").value;
-
 document.getElementById("predTerapR").innerHTML= "Predhodna terapija: " + pred;
 //............asa mallampati, alergija.........................................................
+var asa = document.getElementById("asa").value;
+//alert(asa);
+document.getElementById("asaR").innerHTML= asa;
+
+var mall = document.getElementById("mall").value;
+//alert(mall);
+document.getElementById("mallR").innerHTML= mall;
+
+var alergija = document.getElementById("alergija").value;
+//alert(alergija);
+document.getElementById("alergijaR").innerHTML= alergija;
+
 
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
