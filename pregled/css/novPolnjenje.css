@@ -94,18 +94,18 @@ fieldset.meritve  input  {
   width:50px; 
 }
 
-fieldset.lab {
+#lab {
   padding: 20px 2px;    
 }
 
-fieldset.lab  label  {
+#lab  label  {
   width:100px;
   display: inline-block;
   text-align: right;   
   padding: 1px 1px 1px 20px;
 }
 
-fieldset.lab  input  {
+#lab  input  {
   width:80px; 
 }
 

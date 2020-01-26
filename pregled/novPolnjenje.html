@@ -16,7 +16,7 @@
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
 
 
-<form method="post" action="vnosVrstice.php"> 
+<form id="frm" method="post" action="vnosVrstice.php"> 
 <fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
@@ -94,7 +94,7 @@
     <br> 
  </fieldset>
  
- <fieldset class="lab">
+ <fieldset id="lab">
     <legend></legend>
     <label for="hb">Hb:</label>  
     <input id="hb" type="text" name="hb" size="1" ><br>
@@ -121,10 +121,10 @@
  </fieldset>
 
     <label for="dgPridruzene">Pridružene bolezni:</label><br>  
-    <textarea class="mala" rows="4" cols="200" name="dgPridruzene"></textarea><br>
+    <textarea id= "dgPridruzene" class="mala" rows="4" cols="200" name="dgPridruzene"></textarea><br>
 
     <label for="terPredhodna">Predhodna terapija:</label><br>   
-    <textarea class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
+    <textarea id="terPredhodna" class="mala" rows="4" cols="200" name="terPredhodna"></textarea>
 
  <fieldset class="alergija">
     <legend></legend>
@@ -136,7 +136,7 @@
  
 
 	<labelfor="izvidiInOpombe">Izvidi in opombe:</label><br>  
-    <textarea class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
+    <textarea id="izvidiInOpombe" class="velka"   rows="4" cols="200"  name="izvidiInOpombe" required></textarea><br>
 	
  <fieldset class="zaklucek">
     <legend>premedikacija</legend>
@@ -152,6 +152,8 @@
 	
   <p> <button type="submit">Potrdi</button> .................                     
       <button onclick="reportFunction()">Tisk</button>
+	  <span onclick="reportFunction()"> tisk</span>
+	  
   </p>	
  </fieldset>	
 </div>
@@ -170,17 +172,17 @@
     <p id="diagnozaR">op.diagnoza</p>
     <p id="operacijaR">predvidevana op.</p>
     <p id="meritveR">meritve</p>
-    <p class="labR">lab</p>
+    <p id="labR">lab</p>
   <p id="ekgR">EKG</p> 
   <p id="rtgR">RTG</p> 
-  <p id="pridBolezniR">pridružene bolezni</p>
-  <p id="predTerapR">predhodna terapija</p>
+  <textarea id="pridBolezniR"  class="mala" >pridružene bolezni</textarea>
+  <textarea id="predTerapR"  class="mala" >predhodna terapija</textarea>
  
   <div class="asmalR">
-       ASA: <b id="asaR"></b> Mallampati: <b id="mallampatiR"></b> Alergija: <span id="alergijaR"></span>
+       ASA: <span id="asaR"​ style="border: 1px solid black">.</span> Mallampati: <span id="mallampatiR" style="border: 1px solid black">.</span> Alergija: <span id="alergijaR"></span>
   </div>
 
-  <p id="izvidiR">Izvidi in opombe</p>
+  <textarea class="velka" id="izvidiR">Izvidi in opombe</textarea>
 </div>   
    <div class="premedikacijaR"></div>
    <div id="zdravnikR"></div>
