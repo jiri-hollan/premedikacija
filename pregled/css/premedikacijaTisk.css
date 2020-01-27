@@ -14,9 +14,9 @@ div.celaStran {
     left: 2px;
     height: 2.5cm;
     width: 5.5cm;
-    border-width:1px;  
+    /*border-width:1px;  
     border-style:solid;
-    padding: 12px;
+    padding: 12px;*/
 } 
 h1 {
   position: absolute;

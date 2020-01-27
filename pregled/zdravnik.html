@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="sl-SI">
+<head>
+<link rel="stylesheet" type="text/css" href="css/zdravnik.css">
+</head>
 <body>
-
-<label for="zdravnik">Zdravnik: </label>
+<div id="prijava">
+<br>
+<h1>Prijava</h1>
+<!--<label for="zdravnik">Zdravnik: </label>
 <input id="zdravnik" type="text" name="zdravnik"  onfocusout="zdravnikFunction()" required ><br> 
- <p> <button ​ onclick="naprejFunction()">Naprej</button>
+ -->
+
+<label for="zdravnik">Zdravnik:</label> 
+<input id="zdravnik"  list="zdravniki" name="zdravnik" onfocusout="zdravnikFunction()" required> 
+  <datalist id="zdravniki">
+    <option value="Crnić">
+    <option value="Polh">
+    <option value="Luin">
+    <option value="Hollan">
+    <option value="Priman">
+  </datalist>
+
+
+
+<p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
 <script>
    document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
@@ -29,6 +48,6 @@ function naprejFunction() {
             
 }
 </script>
-
+</div>
 </body>
 </html>
