@@ -63,15 +63,16 @@ meritve =  meritve +  " " + " pulz:" + "&nbsp" + "<b>" + x + "&nbsp" + "/min " +
 document.getElementById("meritveR").innerHTML=meritve;
 
 //........laboratorij...................................................................................
-var text = "";
+var text = "Lab.: ";
 var i;
 var lab = document.getElementById("lab").getElementsByTagName("label");
 var vred =document.getElementById("lab").getElementsByTagName("input"); 
-for (i = 0; i < lab.length; i++) {
-
-  text += lab[i].innerHTML + vred[i].value + "," + "&nbsp" + " ";
-  
-  //alert(text)
+for (i = 0; i < lab.length; i++) 
+{  
+if (vred[i].value.length > 0)
+   {
+   text += lab[i].innerHTML + vred[i].value + "," + "&nbsp" + " ";
+   }
 }
 document.getElementById("labR").innerHTML = text;
 //....................EKG....................................................................
@@ -122,8 +123,8 @@ var navodila = document.getElementById("navodila").value;
 //alert(alergija);
 document.getElementById("navodilaR").innerHTML= navodila;
 //......................zdravnik...............................................................
-  document.getElementById("zdravnikR").innerHTML = localStorage.getItem("imeZdravnika");
 
+document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdravnika").value;
 
 
 }

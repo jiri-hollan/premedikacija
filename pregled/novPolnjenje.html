@@ -58,7 +58,7 @@
  <!-- <label>Za oddelek:<input type="text" name="oddelek" required></label> --> 
 
 
-  <label>Za oddelek:<input id="zaOdd" list="oddelek" name="oddelek"></label>  
+  <label>Za oddelek:<input id="zaOdd" list="oddelek" name="oddelek"required></label>  
   <datalist id="oddelek">
     <option value="Kirurgija">
     <option value="ginekologija">
@@ -67,7 +67,7 @@
     <option value="RTG">
   </datalist>
   
-  <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika"></label>
+  <label for="imeZdravnika">Zdravnik: <input id="imeZdravnika" type="text" name="imeZdravnika" readonly></label>
     <br> 
  </fieldset>
 
@@ -75,10 +75,10 @@
  <fieldset class="diagnoze">
     <legend></legend>
 	<label for="dgOperativna" >Operativna diagnoza:</label>
-	<input id="dgOperativna" type="text" name="dgOperativna" >
+	<input id="dgOperativna" type="text" name="dgOperativna" required>
     <br>  
 	<label for="opNacrtovana">Načrtovana operacija:</label>  
-    <input id="opNacrtovana"  type="text" name="opNacrtovana" >
+    <input id="opNacrtovana"  type="text" name="opNacrtovana" required >
  </fieldset>
 
  
@@ -166,20 +166,19 @@
  <div id="logo"><img src="logoSBI.PNG" alt="logo SBI" width="200" height="100"></div>
   <h1>Anesteziološki pregled</h1>
    <div id="nalepkaR">nalepka</div> 
-
     <p id="obravnavaR"></p>  
 <div class="paragrafi">	
     <p id="diagnozaR">op.diagnoza</p>
     <p id="operacijaR">predvidevana op.</p>
     <p id="meritveR">meritve</p>
     <p id="labR">lab</p>
-  <p id="ekgR">EKG</p> 
-  <p id="rtgR">RTG</p> 
+    <p id="ekgR">EKG</p> 
+    <p id="rtgR">RTG</p> 
   <textarea id="pridBolezniR"  class="mala" >pridružene bolezni</textarea>
   <textarea id="predTerapR"  class="mala" >predhodna terapija</textarea>
  
   <div class="asmalR">
-       ASA: <span id="asaR"​ style="border: 1px solid black; padding-left:5px; padding-right:5px;">.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" style="border: 1px solid black; padding-left:5px; padding-right:5px;">.</span> <span style="padding-left:10px;">Alergija:</span> <span id="alergijaR"></span>
+       ASA: <span id="asaR"​ class="kvadrat" >.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> <span style="padding-left:10px;">Alergija:</span> <span id="alergijaR"></span>
   </div>
 
   <textarea class="velka" id="izvidiR">Izvidi in opombe</textarea>
