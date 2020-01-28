@@ -7,10 +7,6 @@
 <div id="prijava">
 <br>
 <h1>Prijava</h1>
-<!--<label for="zdravnik">Zdravnik: </label>
-<input id="zdravnik" type="text" name="zdravnik"  onfocusout="zdravnikFunction()" required ><br> 
- -->
-
 <label for="zdravnik">Zdravnik:</label> 
 <input id="zdravnik"  list="zdravniki" name="zdravnik" onfocusout="zdravnikFunction()" required> 
   <datalist id="zdravniki">
@@ -20,22 +16,16 @@
     <option value="Hollan">
     <option value="Priman">
   </datalist>
-
-
-
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
 <script>
    document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-function zdravnikFunction() { 
- 
+function zdravnikFunction() {  
 // Check browser support
 if (typeof(Storage) !== "undefined") {
   // Store
  imeZdravnika = document.getElementById("zdravnik").value ;
-
-localStorage.setItem("imeZdravnika", imeZdravnika);
-
+ localStorage.setItem("imeZdravnika", imeZdravnika);
   // Retrieve
   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
 } else {
@@ -43,9 +33,7 @@ localStorage.setItem("imeZdravnika", imeZdravnika);
 }
 }
 function naprejFunction() { 
-
-                window.open("novPolnjenje.html", "_self"); 
-            
+     window.open("novPolnjenje.html", "_self");             
 }
 </script>
 </div>

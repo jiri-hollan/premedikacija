@@ -8,6 +8,17 @@ p {
   text-align: center; 
 }
 
+input:required:invalid{
+  background-color: yellow;
+}
+#druga input:hover {
+  /*border: 3px solid #555;*/
+  background-color: LightYellow;
+}
+#druga input:focus {
+  border: 3px solid #555;
+  /*background-color: LightYellow;*/
+}
 fieldset {
   padding: 20px 2px;
   width:99%; 
@@ -43,8 +54,9 @@ font-size: 20px;
   outline: none;
 }
 
-fieldset.novBolnik input:focus {
+fieldset.novBolnik input:hover {
   border: 3px solid #555;
+  background-color: LightYellow;
 }
 
 fieldset.zacetek  {

@@ -5,8 +5,7 @@ div.celaStran {
     width: 21cm;
 	position: relative; 
     visibility: hidden;
-    border-width:1px;  
-    border-style:solid;
+    
 } 
 #logo {
     position: absolute;
