@@ -2,7 +2,7 @@
    var danes;
   function danesFunction() {
     var d = new Date();   
-    danes = d.toLocaleDateString("sl-SI");  
+    danes = d.toLocaleString("sl-SI");  
     //document.forms["frm1"].elements["datPregleda"].value = danes; 
   document.getElementById("lab6").innerHTML = "Datum pregleda:  " + danes;
   
