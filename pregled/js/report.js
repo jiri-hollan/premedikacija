@@ -1,3 +1,6 @@
+function natisniFunction() {
+window.print();
+}
 
  function reportFunction()
  {
@@ -5,6 +8,7 @@
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.visibility = "visible";
+alert("natisni! bolnik= " + document.title);
 
 //preiskava = document.​forms["frm1"].fieldset["lab"]. ​getElementsByTagName("input")[0].name;
 //alert(preiskava);
@@ -126,5 +130,5 @@ document.getElementById("navodilaR").innerHTML= navodila;
 
 document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdravnika").value;
 
-
+natisniFunction();
 }

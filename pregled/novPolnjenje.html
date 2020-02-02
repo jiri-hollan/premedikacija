@@ -8,6 +8,7 @@
 <script src="js/danes.js"></script>
 <script src="js/starost.js"></script>
 <script src="js/report.js"></script>
+<script src="js/preklopCss.js"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
 </head>
@@ -22,16 +23,16 @@
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
     <label for="ime">Ime:</label>  
-    <input id="ime" type="text" name="ime" required><br>    
+    <input id="ime" type="text" name="ime" pattern="[A-Za-z]{1,}" required><br>    
     <label for="priimek">Priimek:</label>
-    <input id="priimek" type="text" name="priimek"​ required><br>     
+    <input id="priimek" type="text" name="priimek"​ pattern="[A-Za-z]{1,}" required><br>     
     <label for="datRojstva">Datum rojstva:</label>
     <input id="datRojstva"type="text" name="datRojstva" placeholder="dd.mm.LLLL" onkeyup="starostFunction()"
     required><br> 
 
 
     <label for="stevMaticna">Matična številka:</label>
-    <input id="stevMaticna"type="text" name="stevMaticna" required><br>
+    <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required><br>
   <label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO" >  
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
@@ -163,7 +164,7 @@
 
 ...........................Tretji del TISK................................-->
 
-<div class="celaStran" id="tretja" >
+<div class="celaStran" id="tretja">
  <div id="logo"><img src="logoSBI.PNG" alt="logo SBI" width="200" height="100"></div>
   <h1>Anesteziološki pregled</h1>
    <div id="nalepkaR">nalepka</div> 
@@ -190,6 +191,9 @@
 
 </div>
 <script>
+function natisniFunction() {
+window.print();
+}
 
 </script>
 
