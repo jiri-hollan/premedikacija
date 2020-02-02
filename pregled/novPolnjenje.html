@@ -32,9 +32,9 @@
 
 
     <label for="stevMaticna">Matična številka:</label>
-    <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required><br>
+    <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required onkeypress=" return isNumber(event, allNumb)"/><br>
   <label for="EMSO">EMŠO:</label>
-    <input id="EMSO" type="text" name="EMSO" >  
+    <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}"  onkeypress=" return isNumber(event, allNumb)"/ >  
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  ><br>
   <!-- <label for="starost">Starost:<input id="starost" type = "text" name = "starost" readonly  ></label> <br>-->
@@ -130,8 +130,8 @@
 
  <fieldset class="alergija">
     <legend></legend>
-     <label>ASA:<input id="asa" type="text" name="asa" size="1" maxlength="1" ></label>  
-     <label>Mallampati:<input id="mall" type="text" name="mallapati" size="1" maxlength="1" ></label>      
+     <label>ASA:<input id="asa" type="text" name="asa" size="1" maxlength="1" onkeypress=" return isNumber(event, as)"/ ></label>  
+     <label>Mallampati:<input id="mall" type="text" name="mallapati" size="1" maxlength="1" onkeypress=" return isNumber(event, mal)"/></label>      
      <label for="alergija">Alergija:<input id="alergija" type="text" name="alergija"  ></label>
 	 
  </fieldset>
