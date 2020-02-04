@@ -1,14 +1,14 @@
-function natisniFunction() {
-window.print();
-}
 
- function reportFunction()
+
+ var a;
+ function reportFunction(a)
  {
  	 var x;
+  
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.display = "none";
-     document.getElementById("tretja").style.visibility = "visible";
-alert("natisni! bolnik= " + document.title);
+     document.getElementById("tretja").style.display = "block";
+
 
 //preiskava = document.​forms["frm1"].fieldset["lab"]. ​getElementsByTagName("input")[0].name;
 //alert(preiskava);
@@ -130,5 +130,47 @@ document.getElementById("navodilaR").innerHTML= navodila;
 
 document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdravnika").value;
 
-natisniFunction();
+
+     if (a=="t") {
+      natisniFunction();
+     }
+     else if(a=="n") {  
+      nazajFunction();
+     }
+	 else if(a=="p") {  
+      ogledFunction();
+     }
+
+}
+
+function natisniFunction() {
+  alert("natisni! bolnik= " + document.title);
+  document.getElementById("navbar").style.display = "none"; 
+  window.print();
+  ogledFunction();
+}
+
+function nazajFunction() {
+    //alert("poglej bolnik= " + document.title);
+    document.getElementById("navbar").style.display = "block"; 
+    document.getElementById("prva").style.display = "none"; 
+    document.getElementById("druga").style.display = "block";
+    document.getElementById("tretja").style.display = "none";
+    document.getElementById("nazaj").style.visibility = "hidden";
+    document.getElementById("predogled").style.visibility = "visible";
+}
+
+function ogledFunction() {
+  //alert("poglej bolnik= " + document.title);
+  document.getElementById("navbar").style.display = "block"; 
+  document.getElementById("prva").style.display = "none"; 
+  document.getElementById("druga").style.display = "none";
+  document.getElementById("tretja").style.display = "block";
+  document.getElementById("predogled").style.visibility = "hidden";
+  document.getElementById("nazaj").style.visibility = "visible";
+}
+
+function odjavaFunction() { 
+	 localStorage.setItem("imeZdravnika", "");
+     window.open("zdravnik.html", "_self");             
 }

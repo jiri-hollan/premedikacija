@@ -7,7 +7,7 @@ function osebniFunction()
  var z = document.getElementById("frm")["stevMaticna"].value;
 
   if (w == "") {
-    alert("Name must be filled out");
+    alert("Ime must be filled out");
     return false;
   }
 
@@ -37,8 +37,18 @@ stevMaticna = document.getElementById("stevMaticna").value;
   document.getElementById("imeZdravnika").value = localStorage.getItem("imeZdravnika");
 document.getElementsByTagName('title')[0].innerHTML= priimek + " " + ime;
 
+     document.getElementById("navbar").style.display = "block";
      document.getElementById("prva").style.display = "none"; 
-     document.getElementById("druga").style.visibility = "visible";
-     document.getElementById("tretja").style.visibility = "none";
+     document.getElementById("druga").style.display = "block";
+     document.getElementById("tretja").style.display = "none";
+     document.getElementById("nazaj").style.visibility = "hidden";
+     document.getElementById("predogled").style.visibility = "visible";
+     document.getElementById("novB").style.visibility = "visible";
+     document.getElementById("natisni").style.visibility = "visible";
+
+
+
+
+
      }
 }

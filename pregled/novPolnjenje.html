@@ -2,10 +2,11 @@
 <html  lang="sl-SI">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="cache-control" content="No-Cache">
 <title>Novi bolnik</title>
 <script src="js/bmi.js"></script>
-<script src="js/danes.js"></script>
+<script src="js/vpis.js"></script>
 <script src="js/starost.js"></script>
 <script src="js/report.js"></script>
 <script src="js/preklopCss.js"></script>
@@ -13,11 +14,11 @@
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
 </head>
 
-<body onload="danesFunction()"> 
+<!-- <body onload="danesFunction()">  -->
+     <body onload="vpisFunction()">
+ 
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-
-
 <form id="frm" method="post" action="vnosVrstice.php"> 
 <fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
@@ -42,7 +43,7 @@
 
   
      <p>  <!--<button ​onclick = "osebniFunction()">Naprej</button>-->
-            <input ime = naprej onclick = "return osebniFunction()">Naprej</input>
+           <input ime = naprej onclick = "return osebniFunction()">Naprej</input>
 
        
     
@@ -53,7 +54,7 @@
 
 ...........................Drugi del formularja................................-->
 
- <div class="glavna" id="druga" >
+ <div class="glavna" id="druga">
 
 	<h3 id="osebni"> osebni</h3>
 
@@ -154,9 +155,8 @@
  
 
 	
-  <p> <button type="submit">Potrdi</button> .................                     
-      <button onclick="reportFunction()">Tisk</button>
-	  <span onclick="reportFunction()"> tisk</span>
+  <p> <button type="submit">Shrani</button>                    
+     
 	  
   </p>	
  </fieldset>	
@@ -193,12 +193,19 @@
 
 </div>
 <script>
-function natisniFunction() {
-window.print();
-}
-
 </script>
 
+<!--....................................................................................
+	...............................................Navigacija.........................-->
+	
+ <div class="navbar" id="navbar" style='display:z-index:1;'>
+     <span id="odjava" onclick="odjavaFunction()">odjava</span>
+     <span id="novB" onclick="location.reload();">Nov bolnik</span>
+     <span id="nazaj" onclick="nazajFunction()">nazaj</span>
+     <span id="predogled" onclick="reportFunction('p')">predogled</span>
+     <span id="natisni" onclick="reportFunction('t')">natisni</span>
+
+ </div>	 
 
 </body>
 </html>
