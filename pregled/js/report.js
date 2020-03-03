@@ -86,14 +86,8 @@ document.getElementById("ekgR").innerHTML= "EKG: " + ekg;
 //...........................RTG................................................................
 var rtg = document.getElementById("rtg").value;
 document.getElementById("rtgR").innerHTML= "RTG: " + rtg;
-//..............pridružene bolezno........................................................
 
-var prid = document.getElementById("dgPridruzene").value;
-//alert(prid);
-document.getElementById("pridBolezniR").innerHTML= "Pridružene bolezni: " + prid;
-//................................... predhodna terapija.........................................
-var pred = document.getElementById("terPredhodna").value;
-document.getElementById("predTerapR").innerHTML= "Predhodna terapija: " + pred;
+
 //............asa mallampati, alergija.........................................................
 var asa = document.getElementById("asa").value;
 //alert(asa);
@@ -106,11 +100,21 @@ document.getElementById("mallR").innerHTML= mall;
 var alergija = document.getElementById("alergija").value;
 //alert(alergija);
 document.getElementById("alergijaR").innerHTML= alergija;
+
+//..............pridružene bolezni........................................................
+var prid = document.getElementById("dgPridruzene").value;
+//................................... predhodna terapija.........................................
+var pred = document.getElementById("terPredhodna").value;
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
-document.getElementById("izvidiR").innerHTML= "Izvidi in opombe: " + izvidi;
+
+var opis = "Pridružene bolezni: " + prid + "\r" + "\r"
++ "Predhodna terapija: " + pred + "\r"  + "\r"
++ "Izvidi in opombe: " + izvidi;
+//alert(opis);
+document.getElementById("izvidiR").innerHTML= opis;
 //....................premedikacija..........................................................
-var premedikacija = "";
+var premedikacija = "Premedikacija:";
 var vecer = document.getElementById("premedVecer").value;
 var jutri = document.getElementById("premedPredOp").value;
 
@@ -121,7 +125,9 @@ if (jutri.length > 0) {
   premedikacija = premedikacija + "<br>" +  "Pred op.: " + jutri;
 }
 
-document.getElementById("premedikacijaR").insertAdjacentHTML("beforeend", premedikacija);
+//document.getElementById("premedikacijaR").insertAdjacentHTML("beforeend", premedikacija);
+document.getElementById("premedikacijaR").innerHTML= premedikacija;
+
 //....................navodila................................................................
 var navodila = document.getElementById("navodila").value;
 //alert(alergija);
