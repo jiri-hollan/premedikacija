@@ -10,6 +10,7 @@
 <script src="js/starost.js"></script>
 <script src="js/report.js"></script>
 <script src="js/preklopCss.js"></script>
+<script src="js/odjava.js"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
 </head>
@@ -39,11 +40,11 @@
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  ><br>
   <!-- <label for="starost">Starost:<input id="starost" type = "text" name = "starost" readonly  ></label> <br>-->
-  <br><br><br> 
+  <br>
 
   
-     <p>  <!--<button ​onclick = "osebniFunction()">Naprej</button>-->
-           <input ime = naprej onclick = "return osebniFunction()">Naprej</input>
+      <!--<button ​onclick = "osebniFunction()">Naprej</button>-->
+           <p ime = naprej style="background-color:blue; color:white;" onclick = "return osebniFunction()"><b>Naprej</b></p>
 
        
     
@@ -204,7 +205,7 @@
      <span id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span id="predogled" onclick="reportFunction('p')">predogled</span>
      <span id="natisni" onclick="reportFunction('t')">natisni</span>
-
+     <span id="klous" onclick="klousFunction()">x</span>
  </div>	 
 
 </body>

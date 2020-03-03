@@ -12,13 +12,8 @@ function vpisFunction() {
      document.getElementById("novB").style.visibility = "hidden";
      document.getElementById("natisni").style.visibility = "hidden";
 
-
      danesFunction();
 }
-
-
-
-
 
  //izračun današnjeg datuma in prikaz v ljudski obliki. V <input> vložena pravilna oblika datuma za QLS
    var danes;
@@ -30,3 +25,4 @@ function vpisFunction() {
   document.getElementById("datPregleda").value = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
 
 }
+

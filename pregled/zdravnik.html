@@ -3,41 +3,24 @@
 <meta charset="UTF-8">
 <meta http-equiv="cache-control" content="No-Cache">
 <head>
+<script src="js/odjava.js"></script>
 <link rel="stylesheet" type="text/css" href="css/zdravnik.css">
 </head>
 <body>
 <div id="prijava">
-<br>
+<span id="x" onclick="klousFunction()">X</span>
 <h1>Prijava</h1>
 <label for="zdravnik">Zdravnik:</label> 
 <input id="zdravnik"  list="zdravniki" name="zdravnik" onfocusout="zdravnikFunction()" required> 
   <datalist id="zdravniki">
-    <option value="Crnić">
-    <option value="Polh">
-    <option value="Luin">
-    <option value="Hollan">
-    <option value="Priman">
+    <option value='ime zdravnika'>
+    
   </datalist>
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
-<script>
-   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-function zdravnikFunction() {  
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-  // Store
- imeZdravnika = document.getElementById("zdravnik").value ;
- localStorage.setItem("imeZdravnika", imeZdravnika);
-  // Retrieve
-  document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
-}
-function naprejFunction() { 
-     window.open("novPolnjenje.html", "_self");             
-}
-</script>
+
+
+<script src="js/prijava.js"></script> 
 </div>
 </body>
 </html>

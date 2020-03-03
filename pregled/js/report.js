@@ -144,10 +144,14 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
 }
 
 function natisniFunction() {
-  alert("natisni! bolnik= " + document.title);
+  if (confirm("natisni! bolnik= " + document.title)){
   document.getElementById("navbar").style.display = "none"; 
   window.print();
   ogledFunction();
+   }
+else {
+  ogledFunction();
+    }
 }
 
 function nazajFunction() {
@@ -170,7 +174,7 @@ function ogledFunction() {
   document.getElementById("nazaj").style.visibility = "visible";
 }
 
-function odjavaFunction() { 
+/*function odjavaFunction() { 
 	 localStorage.setItem("imeZdravnika", "");
      window.open("zdravnik.html", "_self");             
-}
+}*/

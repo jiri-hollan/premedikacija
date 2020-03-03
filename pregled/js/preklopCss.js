@@ -7,22 +7,22 @@ function osebniFunction()
  var z = document.getElementById("frm")["stevMaticna"].value;
 
   if (w == "") {
-    alert("Ime must be filled out");
+    alert("Ime mora biti vpisano");
     return false;
   }
 
 else if (x == "") {
-    alert("priimek must be filled out");
+    alert("priimek mora biti vpisan");
     return false;
   }
 
 else if (y == "") {
-    alert("datum rojstva must be filled out");
+    alert("datum rojstva mora biti vpisan");
     return false;
   }
 
   else if (z == "") {
-    alert("matična številka must be filled out");
+    alert("matična številka mora biti vpisana");
     return false;
   }
 
