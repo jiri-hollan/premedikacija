@@ -103,14 +103,26 @@ document.getElementById("alergijaR").innerHTML= alergija;
 
 //..............pridružene bolezni........................................................
 var prid = document.getElementById("dgPridruzene").value;
+if (prid.length > 0) {
+    prid =  "<i style='font-size:70%;'>" + "Pridružene bolezni: " + "</i>" + "<br>"  + prid + "<br>";
+}
+else {
+  prid = "";
+    }
 //................................... predhodna terapija.........................................
 var pred = document.getElementById("terPredhodna").value;
+if (pred.length > 0) {
+    pred =  "<i style='font-size:70%;'>" + "Pridružene bolezni: " + "</i>" + "<br>"  + pred + "<br>";
+}
+else {
+  pred = "";
+    }
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
+    izvidi = "<i style='font-size:70%;'>" + "Izvidi in opombe: " + "</i>" + "<br>"  + izvidi;
 
-var opis = "Pridružene bolezni: " + prid + "\r" + "\r"
-+ "Predhodna terapija: " + pred + "\r"  + "\r"
-+ "Izvidi in opombe: " + izvidi;
+var opis = prid + pred + izvidi;
+
 //alert(opis);
 document.getElementById("izvidiR").innerHTML= opis;
 //....................premedikacija..........................................................
