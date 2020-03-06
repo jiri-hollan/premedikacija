@@ -81,11 +81,11 @@ if (vred[i].value.length > 0)
 document.getElementById("labR").innerHTML = text;
 //....................EKG....................................................................
 
-var ekg = document.getElementById("ekg").value;
-document.getElementById("ekgR").innerHTML= "EKG: " + ekg;
+//var ekg = document.getElementById("ekg").value;
+//document.getElementById("ekgR").innerHTML= "EKG: " + ekg;
 //...........................RTG................................................................
-var rtg = document.getElementById("rtg").value;
-document.getElementById("rtgR").innerHTML= "RTG: " + rtg;
+//var rtg = document.getElementById("rtg").value;
+//document.getElementById("rtgR").innerHTML= "RTG: " + rtg;
 
 
 //............asa mallampati, alergija.........................................................
@@ -101,10 +101,29 @@ var alergija = document.getElementById("alergija").value;
 //alert(alergija);
 document.getElementById("alergijaR").innerHTML= alergija;
 
+//....................EKG....................................................................
+
+var ekg = document.getElementById("ekg").value;
+//document.getElementById("ekgR").innerHTML= "EKG: " + ekg;
+if (ekg.length > 0) {
+    ekg =  "<span class='nadpis'>" + "EKG: " + "</span>" + "<br>" + "<span class='besedilo'>" + ekg + "</span>" + "</br>";
+}
+else {
+  ekg = "";
+    }
+//...........................RTG................................................................
+var rtg = document.getElementById("rtg").value;
+//document.getElementById("rtgR").innerHTML= "RTG: " + rtg;
+if (rtg.length > 0) {
+    rtg =  "<span class='nadpis'>" + "RTG: " + "</span>" + "<br>" + "<span class='besedilo'>" + rtg + "</span>" + "</br>";
+}
+else {
+  rtg = "";
+    }
 //..............pridružene bolezni........................................................
 var prid = document.getElementById("dgPridruzene").value;
 if (prid.length > 0) {
-    prid =  "<i style='font-size:70%;'>" + "Pridružene bolezni: " + "</i>" + "<br>"  + prid + "<br>";
+    prid =  "<span class='nadpis'>" + "Pridružene bolezni: " + "</span>" + "<br>" + "<span class='besedilo'>" + prid + "</span>" + "</br>";
 }
 else {
   prid = "";
@@ -112,16 +131,16 @@ else {
 //................................... predhodna terapija.........................................
 var pred = document.getElementById("terPredhodna").value;
 if (pred.length > 0) {
-    pred =  "<i style='font-size:70%;'>" + "Pridružene bolezni: " + "</i>" + "<br>"  + pred + "<br>";
+    pred =  "<span class='nadpis'>" + " " + "Predhodna terapija: " + "</span>" + "<br>" + "<span class='besedilo'>" + pred + "</span>"  + "<br>";
 }
 else {
   pred = "";
     }
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
-    izvidi = "<i style='font-size:70%;'>" + "Izvidi in opombe: " + "</i>" + "<br>"  + izvidi;
+    izvidi = "<span class='nadpis'>" + " " + "Izvidi in opombe: " + "</span>" + "<br>" + "<span class='besedilo'>" + izvidi + "</span>";
 
-var opis = prid + pred + izvidi;
+var opis = ekg + rtg + prid + pred + izvidi;
 
 //alert(opis);
 document.getElementById("izvidiR").innerHTML= opis;
