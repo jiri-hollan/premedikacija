@@ -1,4 +1,4 @@
-/* CSS za novPolnjenje.HTML*/
+﻿/* CSS za novPolnjenje.HTML*/
 
 
 h1 {
@@ -126,18 +126,6 @@ fieldset.meritve  input  {
   width:80px; 
 }
 
-fieldset.ekg {
-  padding: 1px 2px;    
-}
-fieldset.ekg  label  {
-  width:50px;
-  display: inline-block;
-  text-align: right;
-}
-
-fieldset.ekg  input  {
-  width:90%;  
-}
 
 fieldset.alergija  {
  padding: 20px 2px;  
@@ -170,7 +158,7 @@ fieldset.zaklucek  {
 
 textarea.mala {
   width: 100%;
-  height: 50px;
+  height: 40px;
 
     padding: 4px 2px;
   box-sizing: border-box;

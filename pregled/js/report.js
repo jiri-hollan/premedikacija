@@ -104,42 +104,27 @@ document.getElementById("alergijaR").innerHTML= alergija;
 //....................EKG....................................................................
 
 var ekg = document.getElementById("ekg").value;
-//document.getElementById("ekgR").innerHTML= "EKG: " + ekg;
-if (ekg.length > 0) {
-    ekg =  "<span class='nadpis'>" + "EKG: " + "</span>" + "<br>" + "<span class='besedilo'>" + ekg + "</span>" + "</br>";
-}
-else {
-  ekg = "";
-    }
+ekg = opisFunction(ekg, "EKG:");
+//alert(ekg);
+
+
 //...........................RTG................................................................
 var rtg = document.getElementById("rtg").value;
-//document.getElementById("rtgR").innerHTML= "RTG: " + rtg;
-if (rtg.length > 0) {
-    rtg =  "<span class='nadpis'>" + "RTG: " + "</span>" + "<br>" + "<span class='besedilo'>" + rtg + "</span>" + "</br>";
-}
-else {
-  rtg = "";
-    }
+rtg = opisFunction(rtg, "RTG:");
+
 //..............pridružene bolezni........................................................
 var prid = document.getElementById("dgPridruzene").value;
-if (prid.length > 0) {
-    prid =  "<span class='nadpis'>" + "Pridružene bolezni: " + "</span>" + "<br>" + "<span class='besedilo'>" + prid + "</span>" + "</br>";
-}
-else {
-  prid = "";
-    }
+prid = opisFunction(prid, "Pridružene bolezni:" );
+
 //................................... predhodna terapija.........................................
 var pred = document.getElementById("terPredhodna").value;
-if (pred.length > 0) {
-    pred =  "<span class='nadpis'>" + " " + "Predhodna terapija: " + "</span>" + "<br>" + "<span class='besedilo'>" + pred + "</span>"  + "<br>";
-}
-else {
-  pred = "";
-    }
+pred = opisFunction(pred, "Predhodna terapija:" );
+
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
-    izvidi = "<span class='nadpis'>" + " " + "Izvidi in opombe: " + "</span>" + "<br>" + "<span class='besedilo'>" + izvidi + "</span>";
+izvidi = opisFunction(izvidi, "Izvidi in opombe:" );
 
+//......................celi opis................................................................
 var opis = ekg + rtg + prid + pred + izvidi;
 
 //alert(opis);
@@ -177,6 +162,17 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
 	 else if(a=="p") {  
       ogledFunction();
      }
+
+}
+function opisFunction(m,n)
+{
+if (m.length > 0) {
+    m =  "<span class='nadpis'>" + n + "</span>" + "<br>" + "<span class='besedilo'>" + m + "</span>" + "</br>";
+}
+else {
+  m = "";
+    }
+return m;
 
 }
 
