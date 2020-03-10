@@ -3,9 +3,7 @@
 div.celaStran {
     height: 29.7cm;
     width: 21cm;
-	position: relative; 
- 
-    
+	position: relative;    
 } 
 #logo {
     position: absolute;
@@ -35,7 +33,7 @@ h1 {
 }
 #obravnavaR {
     position: absolute;
-    top: 100px;
+    top: 110px;
     left: 2px;
     height: 1cm;
     width: 10cm;
@@ -146,7 +144,8 @@ position: relative;
     margin: 1px;  
 }
 #izvidiR .nadpis{
- font-size:70%; 
+ font-size:100%;
+ font-weight: bold; 
  padding-bottom: 0px;
  margin-bottom:0px;
  margin-left:30px;
