@@ -14,7 +14,7 @@
 //alert(preiskava);
 nalepka = document.getElementById("priimek").value;
 nalepka = "priimek in ime:.... " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
-nalepka = nalepka + "datum rojstva:..... " +  "<b>" + document.getElementById("datRojstva").value + "</b>" + "<br>" ;
+nalepka = nalepka + "datum rojstva:..... " +  "<b>" + datRojstva + "</b>" + "<br>" ;
 nalepka = nalepka + "matična številka:. " +  "<b>" + document.getElementById("stevMaticna").value + "</b>" ;
 //alert(nalepka);
 document.getElementById("nalepkaR").innerHTML=nalepka;

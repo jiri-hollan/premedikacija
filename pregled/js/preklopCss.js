@@ -3,7 +3,7 @@ function osebniFunction()
 
  var w = document.getElementById("frm")["ime"].value;
  var x= document.getElementById("frm")["priimek"].value;
- var y = document.getElementById("frm")["datRojstva"].value;
+ var y =  datRojstva;
  var z = document.getElementById("frm")["stevMaticna"].value;
 
   if (w == "") {
@@ -31,7 +31,7 @@ else if (y == "") {
 
 priimek = document.getElementById("priimek").value;
 ime = document.getElementById("ime").value;
-datRojstva = document.getElementById("datRojstva").value ;
+//datRojstva = document.getElementById("datRojstva").value ;
 stevMaticna = document.getElementById("stevMaticna").value;
   document.getElementById("osebni").innerHTML = priimek + " " + ime + "  " + "roj: " + datRojstva + "  mat. indeks: " + stevMaticna;
   document.getElementById("imeZdravnika").value = localStorage.getItem("imeZdravnika");

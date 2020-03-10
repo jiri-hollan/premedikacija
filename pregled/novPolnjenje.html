@@ -28,10 +28,10 @@
     <input id="ime" type="text" name="ime" pattern="[A-Za-z]{1,}" required><br>    
     <label for="priimek">Priimek:</label>
     <input id="priimek" type="text" name="priimek"​ pattern="[A-Za-z]{1,}" required><br>     
-    <label for="datRojstva">Datum rojstva:</label>
-    <input id="datRojstva"type="text" name="datRojstva" placeholder="dd.mm.LLLL" onkeyup="starostFunction()"
-    required><br> 
-
+    <label for="dan">Datum rojstva:</label>
+    <input id="dan" type="text" name="dan" size="1" maxlength="2"  required onkeyup="starostFunction()" > . 
+    <input id="mesec" type="text" name="mesec" size="1"  maxlength="2" required onkeyup="starostFunction()" > . 
+    <input id="leto"type="text" name="leto" size="2" maxlength="4" required onkeyup="starostFunction()" ><br>
 
     <label for="stevMaticna">Matična številka:</label>
     <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required onkeypress=" return isNumber(event, allNumb)"/><br>
@@ -179,8 +179,6 @@
     <p id="operacijaR">predvidevana op.</p>
     <p id="meritveR">meritve</p>
     <p id="labR">lab</p>
-   <!-- <p id="ekgR">EKG</p> 
-    <p id="rtgR">RTG</p> -->
   <div class="asmalR">
        ASA: <span id="asaR"​ class="kvadrat" >.</span><span style="padding-left:10px;"> Mallampati:</span> <span id="mallR" class="kvadrat" >.</span> <span style="padding-left:10px;">Alergija:</span> <span id="alergijaR"></span>
   </div>
