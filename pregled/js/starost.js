@@ -21,10 +21,10 @@
 
 // month is 0-based, that's why we need dataParts[1] - 1
  // var datRojstva = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);  //datRojstva = dateObject
-  var datRojstva =  new Date(+dateParts[0], dateParts[1] - 1, +dateParts[2]); 
+  var roj =  new Date(+dateParts[0], dateParts[1] - 1, +dateParts[2]); 
 //alert (datRojstva);
  // var datRojstva = new Date(dateObject.toString());
-  var d1 = Date.parse(datRojstva);
+  var d1 = Date.parse(roj);
   var d2 = Date.parse(Date());
   var d3 = d2 - d1;
   var n = 1000*60*60*24*365.25;
