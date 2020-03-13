@@ -11,6 +11,7 @@
 <script src="js/report.js"></script>
 <script src="js/preklopCss.js"></script>
 <script src="js/odjava.js"></script>
+<script src="js/dan.js"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
 </head>
@@ -29,8 +30,14 @@
     <label for="priimek">Priimek:</label>
     <input id="priimek" type="text" name="priimek"​ pattern="[A-Za-z]{1,}" required><br>     
     <label for="dan">Datum rojstva:</label>
-    <input id="dan" type="text" name="dan" size="1" maxlength="2"  required onkeyup="starostFunction()" > . 
-    <input id="mesec" type="text" name="mesec" size="1"  maxlength="2" required onkeyup="starostFunction()" > . 
+    <input id="dan" type="text"   list="dnevi"  name="dan" size="1" maxlength="2"  onfocus="danFunction()"  onkeyup="starostFunction()" required > . 
+    <datalist id="dnevi">
+    <option value='dan Meseca'>
+    </datalist>
+   <input id="mesec" type="text"   list="meseci"  name="mesec" size="1" maxlength="2"  onfocus="danFunction()"  onkeyup="starostFunction()" required > . 
+    <datalist id="meseci">
+    <option value='mesec leta'>
+    </datalist>
     <input id="leto"type="text" name="leto" size="2" maxlength="4" required onkeyup="starostFunction()" ><br>
 
     <label for="stevMaticna">Matična številka:</label>

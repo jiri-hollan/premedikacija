@@ -16,7 +16,7 @@ else if (x == "") {
     return false;
   }
 
-else if (y == "") {
+else if (typeof y == "undefined") {
     alert("datum rojstva mora biti vpisan");
     return false;
   }

@@ -7,23 +7,26 @@
 
  function starostFunction()
  {
+var dan = document.getElementById("dan").value ;
+var mesec = document.getElementById("mesec").value ;
+var leto =  document.getElementById("leto").value ;
+if(dan*mesec*leto >0){
 
- 
-  datRojstva = document.getElementById("leto").value ;
-  datRojstva = datRojstva + "." + document.getElementById("mesec").value ;
-  datRojstva = datRojstva + "." +  document.getElementById("dan").value ;
-
-
-
-   /*  datRojstva = document.getElementById("datRojstva").value ;*/
+ datRojstva = dan + "." + mesec + "." + leto;
   var dateParts = datRojstva.split(".");  
+
+/*  datRojstva = document.getElementById("dan").value ;
+  datRojstva = datRojstva + "." + document.getElementById("mesec").value ;
+  datRojstva = datRojstva + "." +  document.getElementById("leto").value ;*/
+
+
+  //var dateParts = datRojstva.split(".");  
 //alert (dateParts);
 
-// month is 0-based, that's why we need dataParts[1] - 1
- // var datRojstva = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);  //datRojstva = dateObject
-  var roj =  new Date(+dateParts[0], dateParts[1] - 1, +dateParts[2]); 
+//............ month is 0-based, that's why we need dataParts[1] - 1  roj = dateObject.......
+
+  var roj =  new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
 //alert (datRojstva);
- // var datRojstva = new Date(dateObject.toString());
   var d1 = Date.parse(roj);
   var d2 = Date.parse(Date());
   var d3 = d2 - d1;
@@ -33,7 +36,7 @@
  //window.alert (starost);
   document.getElementById("starost").value = starost; 
 }
-
+}
 
 var as = ["1", "2", "3", "4", "5"];
 var mal = ["1", "2", "3", "4"];
