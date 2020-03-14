@@ -45,7 +45,8 @@ var naslov="&nbsp;dr.med";
 var i;
 
 for (i = 0; i < zdravList.length; i++) {
-  text += "<option value=" +  zdravList[i] + naslov + ">"  +"<br>";
+ // text += "<option value=" +  zdravList[i] + naslov + ">"  +"<br>";
+  text += "<option value='" +  zdravList[i] + naslov + "'>"  +"<br>";
 }
 document.getElementById("zdravniki").innerHTML = text;
 

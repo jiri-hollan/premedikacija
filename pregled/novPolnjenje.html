@@ -26,15 +26,15 @@
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
     <label for="ime">Ime:</label>  
-    <input id="ime" type="text" name="ime" pattern="[A-Za-z]{1,}" required><br>    
+    <input id="ime" type="text" name="ime" pattern="[A-Za-zŽžšŠđĐćĆčČ]{1,}" required><br>    
     <label for="priimek">Priimek:</label>
     <input id="priimek" type="text" name="priimek"​ pattern="[A-Za-z]{1,}" required><br>     
     <label for="dan">Datum rojstva:</label>
-    <input id="dan" type="text"   list="dnevi"  name="dan" size="1" maxlength="2"  onfocus="danFunction()"  onkeyup="starostFunction()" required > . 
+    <input id="dan" type="text"   list="dnevi"  name="dan" size="1" maxlength="2"  onfocus="stevilkaFunction(32, 'dan', 'dnevi')"  onkeyup="starostFunction()" required > . 
     <datalist id="dnevi">
     <option value='dan Meseca'>
     </datalist>
-   <input id="mesec" type="text"   list="meseci"  name="mesec" size="1" maxlength="2"  onfocus="danFunction()"  onkeyup="starostFunction()" required > . 
+   <input id="mesec" type="text"   list="meseci"  name="mesec" size="1" maxlength="2"  onfocus="stevilkaFunction(13, 'mesec', 'meseci')"  onkeyup="starostFunction()" required > . 
     <datalist id="meseci">
     <option value='mesec leta'>
     </datalist>
@@ -143,8 +143,16 @@
 
  <fieldset class="alergija">
     <legend></legend>
-     <label>ASA:<input id="asa" type="text" name="asa" size="1" maxlength="1" onkeypress=" return isNumber(event, as)"/ ></label>  
-     <label>Mallampati:<input id="mall" type="text" name="mallapati" size="1" maxlength="1" onkeypress=" return isNumber(event, mal)"/></label>      
+     <label>ASA:<input id="asa" type="text"  list="ase"  name="asa" size="1" maxlength="1"   onfocus="stevilkaFunction(6, 'asa', 'ase')"  onkeypress=" return isNumber(event, as)"/ ></label>  
+	<datalist id="ase">
+    <option value='st asa'>
+    </datalist>
+	 
+     <label>Mallampati:<input id="mall" type="text"   list="mally"  name="mallampati" size="1" maxlength="1"  onfocus="stevilkaFunction(5, 'mall', 'mally')"  onkeypress=" return isNumber(event, mal)"/></label> 
+     <datalist id="mally">
+     <option value='st mall'>
+     </datalist>
+     
      <label for="alergija">Alergija:<input id="alergija" type="text" name="alergija"  ></label>
 	 
  </fieldset>
