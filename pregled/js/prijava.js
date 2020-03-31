@@ -3,7 +3,7 @@ function zdravnikFunction() {
 // Check browser support
 if (typeof(Storage) !== "undefined") {
   // Store
- imeZdravnika = document.getElementById("zdravnik").value ;
+ imeZdravnika = document.getElementById("zdravnik").value || "" ;
  localStorage.setItem("imeZdravnika", imeZdravnika);
   // Retrieve
   document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");

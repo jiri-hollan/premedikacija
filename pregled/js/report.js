@@ -125,8 +125,14 @@ var izvidi = document.getElementById("izvidiInOpombe").value;
 izvidi = izvidi.replace("\n", "<br />");
 izvidi = opisFunction(izvidi, "Izvidi in opombe:" );
 
+//..................Sklep...........................................................
+var sklep = document.getElementById("sklep").value;
+//izvidi = izvidi.replace("\n", "<br />");
+sklep = opisFunction(sklep, "Sklep:" );
+
+
 //......................celi opis................................................................
-var opis = ekg + rtg + prid + pred + izvidi;
+var opis = ekg + rtg + prid + pred + izvidi + sklep;
 
 //alert(opis);
 document.getElementById("izvidiR").innerHTML= opis;

@@ -208,6 +208,10 @@ textarea.velka {
   right: 2px;
 }
 
+#sklep {
+width:95%;	
+}	
+
 #zaklucek {
   position: relative;
   top: 5px;
