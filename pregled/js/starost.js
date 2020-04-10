@@ -24,7 +24,7 @@ if(dan*mesec*leto >0){
 //alert (dateParts);
 
 //............ month is 0-based, that's why we need dataParts[1] - 1  roj = dateObject.......
- document.getElementById("datRojstva").value = datRojstva; 
+ document.getElementById("datRojstva").value = leto + "-" + mesec + "-" + dan; 
   var roj =  new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
 //alert (datRojstva);
   var d1 = Date.parse(roj);
