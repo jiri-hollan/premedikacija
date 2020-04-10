@@ -44,12 +44,11 @@
     <input id="stevMaticna"type="text" name="stevMaticna" pattern="[0-9]{1,}" required onkeypress=" return isNumber(event, allNumb)"/><br>
   <label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}"  onkeypress=" return isNumber(event, allNumb)"/ >  
-    <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->     
-    <input id="datRojstva" type = "text" name = "datRojstva" readonly  >
-    <input id="datPregleda" type = "text" name = "datPregleda" readonly  >
+    <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->  
+    <input id="datRojstva" type = "text" name = "datRojstva" readonly  >   
+    <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  >
     <br>
- 
-
+  <!-- <label for="starost">Starost:<input id="starost" type = "text" name = "starost" readonly  ></label> <br>-->
   <br>
 
   
@@ -186,7 +185,7 @@
  
 
 	
-  <!--<p> <button type="submit">Shrani</button>-->                   
+  <p> <button type="submit">Shrani</button>              
      
 	  
   </p>	

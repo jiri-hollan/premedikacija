@@ -14,7 +14,7 @@ if(dan*mesec*leto >0){
 
  datRojstva = dan + "." + mesec + "." + leto;
   var dateParts = datRojstva.split(".");  
-alert (datRojstva);
+
 /*  datRojstva = document.getElementById("dan").value ;
   datRojstva = datRojstva + "." + document.getElementById("mesec").value ;
   datRojstva = datRojstva + "." +  document.getElementById("leto").value ;*/
@@ -24,13 +24,7 @@ alert (datRojstva);
 //alert (dateParts);
 
 //............ month is 0-based, that's why we need dataParts[1] - 1  roj = dateObject.......
-//------------------------------------------------------------------------------
-  //var datRojBase =  leto + "-" + mesec + "-" + dan;
-  document.getElementById("datRojstva").value = datRojstva; 
-//-___________________________________________________________________________________________________________________
-
-
-
+ document.getElementById("datRojstva").value = datRojstva; 
   var roj =  new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
 //alert (datRojstva);
   var d1 = Date.parse(roj);
@@ -42,9 +36,6 @@ alert (datRojstva);
  //window.alert (starost);
   document.getElementById("starost").value = starost; 
 }
-else{
-alert "ni vneseno";	
-}	
 }
 
 var as = ["1", "2", "3", "4", "5"];
