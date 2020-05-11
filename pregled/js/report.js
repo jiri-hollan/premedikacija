@@ -214,7 +214,14 @@ function ogledFunction() {
   document.getElementById("nazaj").style.visibility = "visible";
 }
 
+function pomocFunction() {
+  var pot = "\\\\hospital.local\\dfs\\EIT\\premedikacija\\pregledani bolniki";
+ prompt("Če ni nastavljena pot do  ciljne mape za PDF jo nastavi.\nSkopiraj spodnji naslov in ga prilepi kot pot.", pot );
+}
+
+
 /*function odjavaFunction() { 
 	 localStorage.setItem("imeZdravnika", "");
      window.open("zdravnik.html", "_self");             
 }*/
+

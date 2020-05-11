@@ -11,7 +11,7 @@ function vpisFunction() {
      document.getElementById("predogled").style.visibility = "hidden";
      document.getElementById("novB").style.visibility = "hidden";
      document.getElementById("natisni").style.visibility = "hidden";
-
+     document.getElementById("pomoc").style.visibility = "hidden";
      danesFunction();
 }
 

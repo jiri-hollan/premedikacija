@@ -45,7 +45,7 @@
   <label for="EMSO">EMŠO:</label>
     <input id="EMSO" type="text" name="EMSO"pattern="[0-9]{1,}"  onkeypress=" return isNumber(event, allNumb)"/ >  
     <!-- //<label for="datPregleda" hidden >Današnji datum:</label>-->  
-    <input id="datRojstva" type = "text" name = "datRojstva" readonly  >   
+    <input id="datRojstva" type = "hidden" name = "datRojstva" readonly  >   
     <input id="datPregleda" type = "hidden" name = "datPregleda" readonly  >
     <br>
   <!-- <label for="starost">Starost:<input id="starost" type = "text" name = "starost" readonly  ></label> <br>-->
@@ -233,7 +233,8 @@
      <span id="novB" onclick="location.reload();">Nov bolnik</span>
      <span id="nazaj" onclick="nazajFunction()">nazaj</span>
      <span id="predogled" onclick="reportFunction('p')">predogled</span>
-     <span id="natisni" onclick="reportFunction('t')">natisni</span>
+     <span id="natisni" onclick="reportFunction('t')">natisni</span>     
+     <span id="pomoc" onclick="pomocFunction()">pomoč</span>
      <span id="klous" onclick="klousFunction()">x</span>
  </div>	 
 
