@@ -12,6 +12,7 @@
 <script src="js/preklopCss.js"></script>
 <script src="js/odjava.js"></script>
 <script src="js/dan.js"></script>
+<script src="js/evaluacija.js"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
 </head>
@@ -112,20 +113,18 @@
  </fieldset>
  
  <fieldset id="lab">
-    <legend></legend>
     <label for="hb">Hb:</label>  
-    <input id="hb" type="text" name="hb" size="1" ><br>
+    <input id="hb" type="text" name="hb" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="ks">KS:</label>  
-    <input id="ks"type="text" name="ks" size="1" > <br>
+    <input id="ks"type="text" name="ks" size="1" onfocusout=  "laborFunction(name,value)"> <br>
     <label for="inr">INR:</label>  
-    <input id="inr" type="text" name="inr" size="1" ><br> 
+    <input id="inr" type="text" name="inr" size="1" onfocusout=  "laborFunction(name,value)"><br> 
     <label for="aptc">APTČ:</label>  
-    <input id="aptc" type="text" name="aptc" size="1" ><br>
+    <input id="aptc" type="text" name="aptc" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="trombociti">Trombociti:</label>  
-    <input id="trombociti" type="text" name="trombociti" size="1" ><br>
+    <input id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
-    <input id="kreatinin" type="text" name="kreatinin" size="1" ><br> 
-    <label for="drugiIzvidi">Drugi izvidi:</label>  
+    <input id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
     <input id="drugiIzvidi" type="textarea" name="drugiIzvidi" size="50" ><br> 
  </fieldset>
  
@@ -185,7 +184,7 @@
  
 
 	
-  <p> <button type="submit">Shrani</button>              
+  <!--<p> <button type="submit">Shrani</button>-->           
      
 	  
   </p>	
