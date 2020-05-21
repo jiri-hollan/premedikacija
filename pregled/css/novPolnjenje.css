@@ -126,7 +126,6 @@ fieldset.meritve  input  {
 
 #lab  input  {
   width:80px;
- 
 }
 
 #stolpec1  {
@@ -138,6 +137,20 @@ fieldset.meritve  input  {
   position: absolute;
   left: 250px;
   width:220px; 
+}
+#stolpec3  {
+  position: absolute;
+  left: 500px;
+  width:220px; 
+}
+#stolpec3  label  {
+  width:1px;
+  display: inline-block;
+  text-align: right;   
+  padding: 1px 1px 1px 1px;
+}
+#stolpec3   input  {
+  width:150px;
 }
 
 fieldset.ekg {
