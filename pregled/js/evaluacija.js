@@ -1,10 +1,10 @@
 
 var hb = {min:100, max:150};
-var ks = {min:3, max:6.5};
-var inr = {min:0.8, max:3};
-var aptc = {min:20, max:45};
-var trombociti = {min:150, max:400};
-var kreatinin = {min:10, max:80};
+var ks = {min:3.6, max:6.1};
+var inr = {min:0.8, max:1.3};
+var aptc = {min:28, max:40};
+var trombociti = {min:150, max:410};
+var kreatinin = {min:72, max:127};
 
  function laborFunction(ime,vrednost)
 {
