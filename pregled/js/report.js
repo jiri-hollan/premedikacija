@@ -122,12 +122,12 @@ pred = opisFunction(pred, "Predhodna terapija:" );
 
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
-izvidi = izvidi.replace("\n", "<br />");
+izvidi = izvidi.replace(/\n/g, "<br />");
 izvidi = opisFunction(izvidi, "Izvidi in opombe:" );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
-//izvidi = izvidi.replace("\n", "<br />");
+//izvidi = izvidi.replace(/\n/g, "<br />");
 sklep = opisFunction(sklep, "Sklep:" );
 
 
