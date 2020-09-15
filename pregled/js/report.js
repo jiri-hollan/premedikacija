@@ -124,7 +124,7 @@ pred = opisFunction(pred, "Predhodna terapija:" );
 var izvidi = document.getElementById("izvidiInOpombe").value;
 
 izvidi = izvidi.replace(/\n/g, "<p />");
-izvidi = opisFunction(izvidi, "Izvidi in opombe:" );
+izvidi = opisFunction(izvidi, "Izvidi in opomb:<br>"  );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
@@ -174,7 +174,7 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
 function opisFunction(m,n)
 {
 if (m.length > 0) {
-    m =  "<span class='nadpis'>" + n + "</span>" + "<br>" + "<span class='besedilo'>" + m + "</span>" + "</br>";
+    m =  "<span class='nadpis'>" + n + "</span>"  + "<span class='besedilo'>" + m + "</span>" + "</br>";
 }
 else {
   m = "";
