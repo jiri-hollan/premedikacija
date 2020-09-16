@@ -46,7 +46,7 @@ h1 {
 position: relative;	
 top: 170px;
 }
-.paragrafi p {
+.prvigrafi p {
 position: relative;
     top: 0px;
     left: 2px;
@@ -135,6 +135,7 @@ position: relative;
 #izvidiR{
     background-color: transparent;
     position: relative;
+    word-wrap: break-word;
     top: 1px;
     left: 2px;
     height: 15cm;
@@ -151,14 +152,23 @@ position: relative;
  margin-left:0px;
 }
 #izvidiR .besedilo{
+
  padding-left: 20px;
- text-indent: 20px;
+ /*text-indent: 20px;*/
 }
 
-/*#izvidiR .besedilo p{
- margin-top: 5px;
- margin-bottom:0px;
-}*/
+#izvidiR  p {
+/*position: relative;*/
+  /*  top: 0px;
+    left: 2px;*/
+	background-color: blue;
+	text-align: left;
+    height: 0.6cm;  
+    width: 98%;
+   text-indent: 20px;
+/* margin-top: 5px;
+ margin-bottom:0px;*/
+}
 
 
 #premedikacijaR {
