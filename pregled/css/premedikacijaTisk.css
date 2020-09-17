@@ -161,11 +161,12 @@ position: relative;
 /*position: relative;*/
   /*  top: 0px;
     left: 2px;*/
-	background-color: blue;
+	/*background-color: blue;*/
 	text-align: left;
     height: 0.6cm;  
     width: 98%;
-   text-indent: 20px;
+  /* text-indent: 20px;*/
+   padding-left: 20px;
 /* margin-top: 5px;
  margin-bottom:0px;*/
 }
@@ -177,6 +178,7 @@ position: relative;
     left: 1px;
     height: 2.5cm;
     width: 7cm;
+     margin-left:50px;
     border-width:1px;  
     border-style:solid;
     padding: 12px;

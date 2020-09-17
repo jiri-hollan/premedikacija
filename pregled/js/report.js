@@ -123,8 +123,8 @@ pred = opisFunction(pred, "Predhodna terapija:" );
 //..................Izvidi in opombe...........................................................
 var izvidi = document.getElementById("izvidiInOpombe").value;
 
-izvidi = izvidi.replace(/\n/g, "<br>&emsp;");
-izvidi = izvidiFunction(izvidi, "Izvidi in opombe: <p>"  );
+izvidi = izvidi.replace(/\n/g, "<br><br>&emsp;");
+izvidi = izvidiFunction(izvidi, "Izvidi in opombe: "  );
 
 //..................Sklep...........................................................
 var sklep = document.getElementById("sklep").value;
@@ -169,7 +169,7 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
 	 else if(a=="p") {  
       ogledFunction();
      }
-
+//....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 }
 function opisFunction(m,n)
 {
@@ -182,11 +182,12 @@ else {
 return m;
 
 }
-
+ 
+//............................................izvidiFunction ureja besedilni opis stanja...................................
 function izvidiFunction(m,n)
 {
 if (m.length > 0) {
-   m =  "......................................................................<br>&emsp;"   + m ;
+   m =  "<p>....................................................................................................................................<br>&emsp;"   + m + "</p>";
   
 }
 else {
