@@ -187,7 +187,7 @@ return m;
 function izvidiFunction(m,n)
 {
 if (m.length > 0) {
-   m =  n + "<p>&emsp;"   + m + "</p>";
+   m =  n + "<span class='besedilo'> &emsp;"  + m + "</span><br><br>";
   
 }
 else {
