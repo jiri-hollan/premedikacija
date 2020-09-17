@@ -153,6 +153,7 @@ position: relative;
   margin-right: auto;
   border-style: dotted;
   border-width: 1px;
+  color: LightGray;
 }
 
 #izvidiR .nadpis{
@@ -163,7 +164,6 @@ position: relative;
  margin-left:0px;
 }
 #izvidiR .besedilo{
-
  padding-left: 20px;
  /*text-indent: 20px;*/
 }
@@ -172,7 +172,7 @@ position: relative;
 /*position: relative;*/
   /*  top: 0px;
     left: 2px;*/
-	/*background-color: blue;*/
+	background-color: blue;
 	text-align: left;
     height: 0.6cm;  
     width: 98%;
@@ -188,8 +188,8 @@ position: relative;
     bottom: 1.5cm;
     left: 1px;
     height: 2.5cm;
-    width: 7cm;
-     margin-left:50px;
+    width: 9cm;
+     margin-left:1px;
     border-width:1px;  
     border-style:solid;
     padding: 12px;
