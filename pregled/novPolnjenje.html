@@ -2,8 +2,8 @@
 <html  lang="sl-SI">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <title>Novi bolnik</title>
 <script src="js/bmi.js"></script>
 <script src="js/vpis.js"></script>
@@ -13,6 +13,8 @@
 <script src="js/odjava.js"></script>
 <script src="js/dan.js"></script>
 <script src="js/evaluacija.js"></script>
+<script src="js/drugiIzvidi.js"></script>
+<script src="js/prijava.js"></script>
 <link rel="stylesheet" type="text/css" href="css/novPolnjenje.css">
 <link rel="stylesheet" type="text/css" href="css/premedikacijaTisk.css">
 </head>
@@ -22,7 +24,7 @@
  
 
 <!--<form method="post" action="<?php //echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">-->
-<form id="frm" method="post" action="vnosVrstice.php"> 
+<form id="frm" name="bolnikForma" method="post" action="vnosVrstice.php" autocomplete="off"> 
 <fieldset class="novBolnik" id="prva">
     <legend>Nov bolnik</legend>
     <h2 id="lab6"> </h2>
@@ -126,8 +128,7 @@
     <input id="trombociti" type="text" name="trombociti" size="1" onfocusout=  "laborFunction(name,value)"><br>
     <label for="kreatinin">Kreatinin:</label>  
     <input id="kreatinin" type="text" name="kreatinin" size="1" onfocusout=  "laborFunction(name,value)"><br> 
-   <!--<label for="drugiIzvidi">Drugi izvidi:</label> 
-    <input id="drugiIzvidi" type="textarea" name="drugiIzvidi" size="50" ><br> -->
+   
 </div>
 <div id="stolpec2">
     <label for="laktat">laktat:</label>  
@@ -146,15 +147,20 @@
 <div id="stolpec3">
     Drugi izvidi<br>
    <label for="x1"></label>  
-    <input id="x1" type="text" name="x1" size="1" ><br>
+    <input id="x1" type="text" name="x1" size="1" onkeyup= "drugiIzvidiFunction()" ><br>
    <label for="x2"></label>  
-    <input id="x2" type="text" name="x2" size="1" ><br>
+    <input id="x2" type="text" name="x2" size="1"onkeyup= "drugiIzvidiFunction()"  ><br>
    <label for="x3"></label>  
-    <input id="x3" type="text" name="x3" size="1" ><br>
+    <input id="x3" type="text" name="x3" size="1" onkeyup= "drugiIzvidiFunction()"><br>
    <label for="x4"></label>  
-    <input id="x4" type="text" name="x4" size="1" ><br>
+    <input id="x4" type="text" name="x4" size="1" onkeyup= "drugiIzvidiFunction()"><br>
    <label for="x5"></label>  
-    <input id="x5" type="text" name="x5" size="1" ><br>
+    <input id="x5" type="text" name="x5" size="1" onkeyup= "drugiIzvidiFunction()"><br>
+	<input id="drugiIzvidi" type="hidden" name="drugiIzvidi" readonly>
+
+	
+
+	
 </div>
  </fieldset>
 
@@ -197,6 +203,7 @@
     <option value="Lahko se uvrsti na operativni program">
     <option value="Potrebna je dodatna obdelava">
     <option value="Ni primeren za operacijo v naši bolnišnici">
+	<option value="Zaradi splošno slabega stanja mora biti uvrščen na program kot prvi">
   </datalist>
 <br><br>
  <fieldset class="zaklucek">premedikacija 
@@ -214,13 +221,13 @@
  
 
 	
-  <!--<p> <button type="submit">Shrani</button>-->           
-     
-	  
-  </p>	
+ <!--<p> <button id="bolnikButon" type="submit">Shrani</button> </p> -->          	  
+	
  </fieldset>	
 </div>
 </form>
+<!--buton je premeščen v navMenu
+<button id="bolnikButon"  type="submit" form="frm" value="Submit">Submit</button>-->
 <!-- ______________________________________________________________________________________
 
 ...........................Tretji del TISK................................-->
@@ -259,13 +266,19 @@
 	...............................................Navigacija.........................-->
 	
  <div class="navbar" id="navbar" style='display:z-index:1;'>
-     <span id="odjava" onclick="odjavaFunction()">odjava</span>
-     <span id="novB" onclick="location.reload();">Nov bolnik</span>
-     <span id="nazaj" onclick="nazajFunction()">nazaj</span>
-     <span id="predogled" onclick="reportFunction('p')">predogled</span>
-     <span id="natisni" onclick="reportFunction('t')">natisni</span>     
-     <span id="pomoc" onclick="pomocFunction()">pomoč</span>
-     <span id="klous" onclick="klousFunction()">x</span>
+ <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
+	 <!-- Funkcija novBolnikFunction shrani formu u bazo in skoči na vpis novega bolnika -->
+	<!-- <span class="navSpan" id="novB" onclick="novBolnikFunction() ">Nov bolnik</span>-->
+     <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>
+     <span class="navSpan" id="nazaj" onclick="nazajFunction()">nazaj</span>
+     <span class="navSpan" id="predogled" onclick="return reportFunction('p')">predogled</span>
+     <span class="navSpan" id="natisni" onclick="return reportFunction('t')">natisni</span>     
+     <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>
+	<!-- <span class="navspan" id="spanButon" <button type="submit" form="frm" value="Submit">Submit</button></span>-->
+	 <button id="submitFrm" type="submit" form="frm" value="Submit">Shrani</button>
+  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
+	
+	
  </div>	 
 
 </body>
