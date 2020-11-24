@@ -1,17 +1,89 @@
 
-
  var a;
  function reportFunction(a)
  {
- 	 var x;
+ var x;	 
+ var x1 = document.getElementById("frm")["oddelek"].value;
+ var x2 = document.getElementById("frm")["dgOperativna"].value;
+ var x3 = document.getElementById("frm")["opNacrtovana"].value;
+ var x4 = document.getElementById("frm")["teza"].value;
+ var x5 = document.getElementById("frm")["visina"].value;
+ var x6 = document.getElementById("frm")["izvidiInOpombe"].value;
+ var x7 = document.getElementById("frm")["sklep"].value;
+ /*var v8 = document.getElementById("frm")["stevMaticna"].value;
+ var x9 = document.getElementById("frm")["stevMaticna"].value;
+ var x10 = document.getElementById("frm")["stevMaticna"].value;
+ var x11 = document.getElementById("frm")["stevMaticna"].value;*/
+ 
+  if (x1 == "") {
+    alert("oddelek mora biti vpisan");
+    return false;
+  }
+
+else if (x2 == "") {
+    alert("dgOperativna mora biti vpisana");
+    return false;
+  }
+
+else if (x3 == "") {
+    alert("opNacrtovana mora biti vpisana");
+    return false;
+  }
+
+  else if (x4 == "") {
+    alert("teza mora biti vpisana");
+    return false;
+  }
+ else if (x5 == "") {
+    alert("visina mora biti vpisana");
+    return false;
+  }
+else if (x6 == "") {
+    alert("izvidiInOpombe ne smejo biti prazni");
+    return false;
+  }
+else if (x7 == "") {
+    alert("sklep mora biti vpisan");
+    return false;
+  }
+/*else if (x4 == "") {
+    alert("teza mora biti vpisana");
+    return false;
+  }
+else if (x4 == "") {
+    alert("teza mora biti vpisana");
+    return false;
+  }
+else if (x4 == "") {
+    alert("teza mora biti vpisana");
+    return false;
+  }*/
+
+
+ else {
+
   
      document.getElementById("prva").style.display = "none"; 
      document.getElementById("druga").style.display = "none";
      document.getElementById("tretja").style.display = "block";
 
 
-//preiskava = document.​forms["frm1"].fieldset["lab"]. ​getElementsByTagName("input")[0].name;
-//alert(preiskava);
+  if (!localStorage.getItem("aktivnaBolnica") == "") {
+logo = document.getElementById("logo").innerHTML;
+//alert (logo);
+boln = localStorage.getItem("aktivnaBolnica");
+//alert (boln);
+
+logo = '<img  id="';
+logo = logo + 'imgBol"';
+logo = logo + '<img src="' + boln + '">';
+
+
+//logo = '<img src="logoSBI.png" alt="logo SBI" width="200" height="100">';
+//alert (logo);
+document.getElementById("logo").innerHTML = logo;
+  }
+  
 nalepka = document.getElementById("priimek").value;
 nalepka = "priimek in ime:.... " + "<b>" + nalepka + " " + document.getElementById("ime").value + "</b>" + "<br>";
 nalepka = nalepka + "datum rojstva:..... " +  "<b>" + datRojstva + "</b>" + "<br>" ;
@@ -69,13 +141,16 @@ document.getElementById("meritveR").innerHTML=meritve;
 //........laboratorij...................................................................................
 var text = "Lab.: ";
 var i;
+var videz;
 var lab = document.getElementById("lab").getElementsByTagName("label");
 var vred =document.getElementById("lab").getElementsByTagName("input"); 
 for (i = 0; i < lab.length; i++) 
 {  
 if (vred[i].value.length > 0)
    {
-   text += lab[i].innerHTML + vred[i].value + "," + "&nbsp" + " ";
+	var videz = vred[i].style.fontWeight;
+	
+   text += '<span style= "font-weight:' + videz + '">' + lab[i].innerHTML + vred[i].value + "</span>," + "&nbsp" + " ";
    }
 }
 document.getElementById("labR").innerHTML = text;
@@ -171,6 +246,8 @@ document.getElementById("zdravnikR").innerHTML = document.getElementById("imeZdr
      }
 //....................................opisFunction ureja: ekg, RTG, Predhodna terapija, pridružrne bolezni..............
 }
+ }
+
 function opisFunction(m,n)
 {
 if (m.length > 0) {
@@ -196,7 +273,6 @@ else {
 return m;
 
 }
-
 function natisniFunction() {
   if (confirm("natisni! bolnik= " + document.title)){
   document.getElementById("navbar").style.display = "none"; 
@@ -216,6 +292,7 @@ function nazajFunction() {
     document.getElementById("tretja").style.display = "none";
     document.getElementById("nazaj").style.visibility = "hidden";
     document.getElementById("predogled").style.visibility = "visible";
+	document.getElementById("submitFrm").style.visibility = "hidden";
 }
 
 function ogledFunction() {
@@ -226,6 +303,7 @@ function ogledFunction() {
   document.getElementById("tretja").style.display = "block";
   document.getElementById("predogled").style.visibility = "hidden";
   document.getElementById("nazaj").style.visibility = "visible";
+  document.getElementById("submitFrm").style.visibility = "visible";
 }
 
 function pomocFunction() {
