@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="sl-SI">
-<meta charset="UTF-8">
 <meta http-equiv="cache-control" content="No-Cache">
+<meta charset="UTF-8">
+
 <head>
-<script src="js/odjava.js?v=<?=time();?"></script>
-<link rel="stylesheet" type="text/css" href="css/zdravnik.css">
+<script src="js/prijava.js?<?php echo time(); ?>"></script> 
+<script src="js/odjava.js?<?php echo time(); ?>"></script>
+<link rel="stylesheet" type="text/css" href="css/zdravnik.css?<?php echo time(); ?>">
 </head>
 <body>
+
 Če niste odprli program v Google Chromu, ne bo delal pravilno
 <!--[if IE]>
     <div class="IE" style="
@@ -24,19 +27,30 @@
 [endif]-->
 
 <div id="prijava">
-<span id="x" onclick="klousFunction()">X</span>
 <h1>Prijava</h1>
-<label for="zdravnik">Zdravnik:</label> 
+
+<label for="zdravnik" >Zdravnik:</label> 
 <input id="zdravnik"  list="zdravniki" name="zdravnik" onfocusout="zdravnikFunction()" required> 
-  <datalist id="zdravniki">
-    <option value='ime zdravnika'>
-    
-  </datalist>
+     <datalist id="zdravniki">
+      <option value='ime zdravnika'>
+     </datalist>
 <p> <button ​ onclick="naprejFunction()">Naprej</button>
 <p id="result"> </p>
+  <script>listaZdravnikovFunction();</script>
 
-
-<script src="js/prijava.js"></script> 
+</div>
+<div class="navbar" id="navBolnice" style='display:z-index:1;'>
+     <button id="buttonDomov" onclick="window.location.href='../menuFile.html';"> Domov </button>
+     <span class="" id="odjava" onclick="odjavaFunction()">odjava</span>
+	 <!-- Preklapljanje med bolnišnicami -->
+	<span class="navSpan" id="sbi" onclick="sbFunction('i')">S.B. Izola</span>
+	<span class="navSpan" id="sbj" onclick="sbFunction('j')">S.B. Jesenice</span>	
+    <!-- <span class="navSpan" id="novB" onclick="location.reload();">Nov bolnik</span>    	 
+     <span class="navSpan" id="pomoc" onclick="pomocFunction()">pomoč</span>-->
+  <!--<span class="navSpan" id="klous" onclick='document.getElementById("frm").submit();'>ynos v bazo</span>-->
+	
+	
+ </div>	
 </div>
 </body>
 </html>
