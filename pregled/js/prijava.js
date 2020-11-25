@@ -21,12 +21,12 @@ function sbFunction(bol) {
 
 switch (bol) {
   case "i":
-    localStorage.setItem("aktivnaBolnica","logoSBI.png");
+    localStorage.setItem("aktivnaBolnica","SBI");
     text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S.B. Izola");
     break;
   case "j":
-    localStorage.setItem("aktivnaBolnica","logoSBJ.png");
+    localStorage.setItem("aktivnaBolnica","SBJ");
     text = localStorage.getItem("aktivnaBolnica");
 	//alert ("Formular za S,B,Jesenice");
     break;
@@ -36,7 +36,7 @@ switch (bol) {
     }
 }    
 else {
-	 // alert ("bolnica ni aktivirana");	
+	 // alert ("nobena bolnišnica ni aktivirana");	
 	}
 }
 function naprejFunction() { 
