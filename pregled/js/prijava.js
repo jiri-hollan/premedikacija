@@ -38,6 +38,7 @@ switch (bol) {
 else {
 	 // alert ("nobena bolnišnica ni aktivirana");	
 	}
+
 }
 function naprejFunction() { 
  if (localStorage.getItem("imeZdravnika").length < 3) {
@@ -50,7 +51,7 @@ function naprejFunction() {
 function listaZdravnikovFunction() {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-
+//document.getElementById("aktBolnica").innerHTML = "formular za:  " + localStorage.getItem("aktivnaBolnica");
 var zdravList  =[
 "Nadežda&nbsp;Crnić&nbsp;Tokić",
 "Damjan&nbsp;Polh",
