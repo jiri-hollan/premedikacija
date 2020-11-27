@@ -51,7 +51,7 @@ function naprejFunction() {
 function listaZdravnikovFunction() {
 	//alert ("lista zdravnikov function");
 document.getElementById("result").innerHTML = "prijavljen je:  " + localStorage.getItem("imeZdravnika");
-document.getElementById("aktBolnica").innerHTML = "Za:  " + localStorage.getItem("aktivnaBolnica");
+document.getElementById("aktBolnica").innerHTML = "<h1> Izola</h1>";
 var zdravList  =[
 "Nadežda&nbsp;Crnić&nbsp;Tokić",
 "Damjan&nbsp;Polh",
